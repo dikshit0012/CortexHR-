@@ -1,0 +1,6 @@
+detector,precision,recall,f1,true_positives,false_positives,false_negatives,records_flagged,pct_flagged
+Published baseline (anomaly_baselines),0.403,0.593,0.48,89,132,61,221,3.01
+"Baseline recipe re-run here (raw 10 features, 3%)",0.398,0.587,0.474,88,133,62,221,3.01
+Isolation Forest (our features),0.412,0.607,0.491,91,130,59,221,3.01
+Rule-based only,0.918,0.6,0.726,90,8,60,98,1.34
+Combined (IF OR rules),0.488,0.827,0.614,124,130,26,254,3.46

@@ -1,0 +1,233 @@
+{
+  "rows": 2379,
+  "inputs": 33,
+  "leavers": 349,
+  "leaver_rate": 0.14670029424127784,
+  "fold_table": [
+    {
+      "fold": 1,
+      "test_rows": 476,
+      "test_leavers": 70,
+      "leaver_share_%": 14.71
+    },
+    {
+      "fold": 2,
+      "test_rows": 476,
+      "test_leavers": 70,
+      "leaver_share_%": 14.71
+    },
+    {
+      "fold": 3,
+      "test_rows": 476,
+      "test_leavers": 70,
+      "leaver_share_%": 14.71
+    },
+    {
+      "fold": 4,
+      "test_rows": 476,
+      "test_leavers": 70,
+      "leaver_share_%": 14.71
+    },
+    {
+      "fold": 5,
+      "test_rows": 475,
+      "test_leavers": 69,
+      "leaver_share_%": 14.53
+    }
+  ],
+  "lr_confusion_at_0.5": {
+    "tp": 221,
+    "fp": 618,
+    "fn": 128,
+    "tn": 1412,
+    "flagged_share": 0.3526691887347625
+  },
+  "overfit": [
+    {
+      "model": "Logistic Regression (balanced)",
+      "AUC on its own training rows": 0.801,
+      "AUC in cross-validation": 0.71,
+      "gap": 0.091
+    },
+    {
+      "model": "Decision Tree (depth 4, balanced)",
+      "AUC on its own training rows": 0.747,
+      "AUC in cross-validation": 0.645,
+      "gap": 0.102
+    },
+    {
+      "model": "Decision Tree (no depth limit, balanced)",
+      "AUC on its own training rows": 1.0,
+      "AUC in cross-validation": 0.542,
+      "gap": 0.458
+    }
+  ],
+  "comparison": [
+    {
+      "model": "Dummy (always stays)",
+      "ROC-AUC ours": "0.500 +/- 0.000",
+      "ROC-AUC benchmark": "0.500 +/- 0.000",
+      "diff": 0.0,
+      "PR-AUC ours": 0.147,
+      "PR-AUC bench": 0.146,
+      "precision ours": 0.0,
+      "precision bench": 0.0,
+      "recall ours": 0.0,
+      "recall bench": 0.0,
+      "accuracy ours": 0.853,
+      "accuracy bench": 0.854
+    },
+    {
+      "model": "Logistic Regression (balanced)",
+      "ROC-AUC ours": "0.712 +/- 0.018",
+      "ROC-AUC benchmark": "0.713 +/- 0.010",
+      "diff": -0.001,
+      "PR-AUC ours": 0.309,
+      "PR-AUC bench": 0.332,
+      "precision ours": 0.265,
+      "precision bench": 0.26,
+      "recall ours": 0.633,
+      "recall bench": 0.63,
+      "accuracy ours": 0.686,
+      "accuracy bench": 0.683
+    },
+    {
+      "model": "Decision Tree (depth 4, balanced)",
+      "ROC-AUC ours": "0.654 +/- 0.038",
+      "ROC-AUC benchmark": "0.650 +/- 0.019",
+      "diff": 0.004,
+      "PR-AUC ours": 0.255,
+      "PR-AUC bench": 0.256,
+      "precision ours": 0.236,
+      "precision bench": 0.234,
+      "recall ours": 0.525,
+      "recall bench": 0.524,
+      "accuracy ours": 0.681,
+      "accuracy bench": 0.676
+    },
+    {
+      "model": "Decision Tree (no depth limit, balanced)",
+      "ROC-AUC ours": "0.542 +/- 0.028",
+      "ROC-AUC benchmark": "not in sheet",
+      "diff": NaN,
+      "PR-AUC ours": 0.164,
+      "PR-AUC bench": NaN,
+      "precision ours": 0.214,
+      "precision bench": NaN,
+      "recall ours": 0.226,
+      "recall bench": NaN,
+      "accuracy ours": 0.765,
+      "accuracy bench": NaN
+    }
+  ],
+  "summary": {
+    "Dummy (always stays)": {
+      "roc_auc_mean": 0.5,
+      "pr_auc_mean": 0.1466996904024768,
+      "precision_mean": 0.0,
+      "recall_mean": 0.0,
+      "f1_mean": 0.0,
+      "accuracy_mean": 0.8533003095975232,
+      "roc_auc_sd": 0.0,
+      "pr_auc_sd": 0.0008030460847986874,
+      "roc_auc_pooled": 0.5,
+      "pr_auc_pooled": 0.14670029424127784
+    },
+    "Logistic Regression (balanced)": {
+      "roc_auc_mean": 0.7120961967995594,
+      "pr_auc_mean": 0.3087094544682108,
+      "precision_mean": 0.26482327484343615,
+      "recall_mean": 0.6333747412008282,
+      "f1_mean": 0.3729581114105697,
+      "accuracy_mean": 0.686406899601946,
+      "roc_auc_sd": 0.018350967599661903,
+      "pr_auc_sd": 0.02262725964846438,
+      "roc_auc_pooled": 0.7102530805820995,
+      "pr_auc_pooled": 0.2982155177248967
+    },
+    "Decision Tree (no depth limit, balanced)": {
+      "roc_auc_mean": 0.542047547654744,
+      "pr_auc_mean": 0.16369505713673074,
+      "precision_mean": 0.21377623748417202,
+      "recall_mean": 0.22645962732919256,
+      "f1_mean": 0.21950215173343418,
+      "accuracy_mean": 0.7650269792127377,
+      "roc_auc_sd": 0.028298290137201754,
+      "pr_auc_sd": 0.01119320755129672,
+      "roc_auc_pooled": 0.5419982497494601,
+      "pr_auc_pooled": 0.1620868727093977
+    },
+    "Decision Tree (depth 4, balanced)": {
+      "roc_auc_mean": 0.6543597079011515,
+      "pr_auc_mean": 0.2550166233915564,
+      "precision_mean": 0.23642870998721438,
+      "recall_mean": 0.5246376811594203,
+      "f1_mean": 0.3248165507000881,
+      "accuracy_mean": 0.6813843432109686,
+      "roc_auc_sd": 0.03782853408520542,
+      "pr_auc_sd": 0.05255835318409574,
+      "roc_auc_pooled": 0.645283498242692,
+      "pr_auc_pooled": 0.2475509190316759
+    }
+  },
+  "noise": {
+    "fold_sd": 0.018350967599661903,
+    "bootstrap_95ci": [
+      0.6785763770825173,
+      0.737297265984552
+    ],
+    "split_seed_mean": 0.7107871892952418,
+    "split_seed_sd": 0.005188386176928967,
+    "split_seed_min": 0.7032803082699338,
+    "split_seed_max": 0.7160670176577695,
+    "tree4_split_seed_sd": 0.011780259310291474,
+    "pr_auc_fold_sd": 0.02262725964846438
+  },
+  "controls": {
+    "shuffled_labels_auc": 0.48710319420723525,
+    "naive_preprocessing_auc": 0.7103420046014651,
+    "proper_auc": 0.7102530805820995
+  },
+  "variants": [
+    {
+      "logistic regression, feature set": "main feature set",
+      "input columns": 33,
+      "ROC-AUC (pooled)": 0.7103
+    },
+    {
+      "logistic regression, feature set": "without the monthly attendance/payroll features",
+      "input columns": 30,
+      "ROC-AUC (pooled)": 0.7105
+    },
+    {
+      "logistic regression, feature set": "with the UNCONFIRMED dept_attrition_rate_prior_12m",
+      "input columns": 34,
+      "ROC-AUC (pooled)": 0.7095
+    }
+  ],
+  "per_source": [
+    {
+      "rows": "historical_extension",
+      "n": 2000,
+      "leavers": 299,
+      "ROC-AUC": 0.714,
+      "bootstrap 95% interval": "0.68 to 0.74"
+    },
+    {
+      "rows": "master_employee_snapshot",
+      "n": 379,
+      "leavers": 50,
+      "ROC-AUC": 0.688,
+      "bootstrap 95% interval": "0.61 to 0.76"
+    }
+  ],
+  "note": [
+    "Our logistic regression reaches a ROC-AUC of 0.712 (sd 0.018 across the five folds) against the benchmark's 0.713, so it is level with the benchmark, and the depth-4 tree (0.654 vs 0.650) and the Dummy model (0.500 ROC-AUC, 0.853 accuracy) match it too.",
+    "The one number below the benchmark is the logistic regression's PR-AUC (0.309 vs 0.332), but that gap is smaller than twice the fold-to-fold sd of 0.023 and we also used 2,379 rows after removing duplicates and negative-tenure rows, so exact equality was never expected.",
+    "The gaps are believable because they are tiny compared with the noise: changing the fold split moves our ROC-AUC by about 0.005, and a bootstrap 95% interval (0.679 to 0.737) contains the benchmark.",
+    "Nothing looks like leakage: every honest score is far below 0.9, a control run with shuffled labels scores 0.49 (chance), and fitting the preprocessing outside the folds changed nothing measurable.",
+    "The Dummy result shows why accuracy misleads (it is 85% accurate and catches nobody), and the logistic regression shows the problem is genuinely hard: it ranks a leaver above a stayer about 71% of the time, but at a 0.5 cut-off it catches 63% of leavers with only 26% precision, which Task 4 will judge properly."
+  ],
+  "random_state": 42,
+  "n_splits": 5
+}

@@ -1,0 +1,947 @@
+{
+  "rows": 2389,
+  "cols": 42,
+  "rows_real": 389,
+  "rows_hist": 2000,
+  "role_counts": {
+    "FEATURE": 31,
+    "LEAK": 6,
+    "ID": 2,
+    "PROVENANCE": 2,
+    "LABEL": 1
+  },
+  "dup_rows": 6,
+  "dup_employee_ids": [
+    "EMP-0060",
+    "EMP-0237",
+    "EMP-0238",
+    "EMP-0325",
+    "EMP-0483",
+    "EMP-0570"
+  ],
+  "unique_employees": 2383,
+  "real_unique_employees": 383,
+  "missing": [
+    {
+      "column": "resignation_date",
+      "missing_n": 2068,
+      "missing_pct": 86.6,
+      "cause": "Exit information: blank for everyone who stayed",
+      "plan": "DROP (leakage, see section 8)"
+    },
+    {
+      "column": "exit_date",
+      "missing_n": 2040,
+      "missing_pct": 85.4,
+      "cause": "Exit information: blank for everyone who stayed",
+      "plan": "DROP (leakage, see section 8)"
+    },
+    {
+      "column": "exit_reason",
+      "missing_n": 2040,
+      "missing_pct": 85.4,
+      "cause": "Exit information: blank for everyone who stayed",
+      "plan": "DROP (leakage, see section 8)"
+    },
+    {
+      "column": "fnf_settlement_amount",
+      "missing_n": 2040,
+      "missing_pct": 85.4,
+      "cause": "Exit information: blank for everyone who stayed",
+      "plan": "DROP (leakage, see section 8)"
+    },
+    {
+      "column": "exit_interview_done",
+      "missing_n": 2040,
+      "missing_pct": 85.4,
+      "cause": "Exit information: blank for everyone who stayed",
+      "plan": "DROP (leakage, see section 8)"
+    },
+    {
+      "column": "months_since_last_promotion",
+      "missing_n": 1459,
+      "missing_pct": 61.1,
+      "cause": "Structural: never promoted",
+      "plan": "KEEP + flag + fill with tenure_months"
+    },
+    {
+      "column": "last_engagement_score",
+      "missing_n": 528,
+      "missing_pct": 22.1,
+      "cause": "Non-response (22%)",
+      "plan": "KEEP + flag + fill with median"
+    },
+    {
+      "column": "last_raise_pct",
+      "missing_n": 202,
+      "missing_pct": 8.5,
+      "cause": "Structural: never had a raise",
+      "plan": "KEEP + flag + fill with 0"
+    },
+    {
+      "column": "last_performance_rating",
+      "missing_n": 182,
+      "missing_pct": 7.6,
+      "cause": "Structural: joined <12 months ago, no appraisal yet",
+      "plan": "KEEP + flag + fill with median"
+    },
+    {
+      "column": "commute_distance_km",
+      "missing_n": 55,
+      "missing_pct": 2.3,
+      "cause": "Random gaps (2.3%)",
+      "plan": "KEEP + flag + fill with median by city"
+    },
+    {
+      "column": "highest_education",
+      "missing_n": 15,
+      "missing_pct": 0.6,
+      "cause": "Random gaps (0.6%)",
+      "plan": "KEEP + fill with 'Unknown'"
+    }
+  ],
+  "missing_signal": [
+    {
+      "column": "last_engagement_score",
+      "attrition_if_missing_%": 16.7,
+      "attrition_if_present_%": 14.0,
+      "n_missing": 528,
+      "chi2_p_value": 0.148
+    },
+    {
+      "column": "last_performance_rating",
+      "attrition_if_missing_%": 15.4,
+      "attrition_if_present_%": 14.5,
+      "n_missing": 182,
+      "chi2_p_value": 0.842
+    },
+    {
+      "column": "commute_distance_km",
+      "attrition_if_missing_%": 9.1,
+      "attrition_if_present_%": 14.7,
+      "n_missing": 55,
+      "chi2_p_value": 0.328
+    },
+    {
+      "column": "highest_education",
+      "attrition_if_missing_%": 13.3,
+      "attrition_if_present_%": 14.6,
+      "n_missing": 15,
+      "chi2_p_value": 1.0
+    },
+    {
+      "column": "last_raise_pct",
+      "attrition_if_missing_%": 16.3,
+      "attrition_if_present_%": 14.4,
+      "n_missing": 202,
+      "chi2_p_value": 0.534
+    },
+    {
+      "column": "months_since_last_promotion",
+      "attrition_if_missing_%": 15.1,
+      "attrition_if_present_%": 13.8,
+      "n_missing": 1459,
+      "chi2_p_value": 0.382
+    }
+  ],
+  "violations": [
+    {
+      "rule": "tenure_months < 0",
+      "rows_violating": 4,
+      "in_real_snapshot": 4,
+      "in_historical": 0
+    },
+    {
+      "rule": "attendance_rate_3m > 1 (more than 100%)",
+      "rows_violating": 2,
+      "in_real_snapshot": 0,
+      "in_historical": 2
+    },
+    {
+      "rule": "wfh_share_3m < 0",
+      "rows_violating": 190,
+      "in_real_snapshot": 0,
+      "in_historical": 190
+    },
+    {
+      "rule": "wfh_share_3m > 1",
+      "rows_violating": 23,
+      "in_real_snapshot": 0,
+      "in_historical": 23
+    },
+    {
+      "rule": "total_experience_years < 0",
+      "rows_violating": 10,
+      "in_real_snapshot": 0,
+      "in_historical": 10
+    },
+    {
+      "rule": "total_experience < tenure (by more than 0.1 yr)",
+      "rows_violating": 137,
+      "in_real_snapshot": 0,
+      "in_historical": 137
+    },
+    {
+      "rule": "last_performance_rating outside 1-5",
+      "rows_violating": 0,
+      "in_real_snapshot": 0,
+      "in_historical": 0
+    },
+    {
+      "rule": "last_engagement_score outside 1-5",
+      "rows_violating": 0,
+      "in_real_snapshot": 0,
+      "in_historical": 0
+    },
+    {
+      "rule": "job_level outside 1-6",
+      "rows_violating": 0,
+      "in_real_snapshot": 0,
+      "in_historical": 0
+    },
+    {
+      "rule": "comp_ratio <= 0",
+      "rows_violating": 0,
+      "in_real_snapshot": 0,
+      "in_historical": 0
+    },
+    {
+      "rule": "work_location spelled inconsistently",
+      "rows_violating": 13,
+      "in_real_snapshot": 5,
+      "in_historical": 8
+    },
+    {
+      "rule": "promotions_received=0 but months_since_promotion given",
+      "rows_violating": 0,
+      "in_real_snapshot": 0,
+      "in_historical": 0
+    },
+    {
+      "rule": "months_since_last_promotion > tenure",
+      "rows_violating": 0,
+      "in_real_snapshot": 0,
+      "in_historical": 0
+    }
+  ],
+  "outliers": [
+    {
+      "variable": "Salary (INR/yr)",
+      "column": "annual_fixed_pay",
+      "n": 2383,
+      "skewness": 4.81,
+      "IQR_flags": 93,
+      "z_flags": 26,
+      "both": 26,
+      "IQR_only": 67,
+      "z_only": 0,
+      "min": 148848.0,
+      "median": 756972.0,
+      "max": 18671760.0,
+      "IQR_lower": -990153.0,
+      "IQR_upper": 2838351.0,
+      "z_lower": -1541764.76,
+      "z_upper": 3597964.47
+    },
+    {
+      "variable": "Daily hours worked",
+      "column": "avg_hours_worked_3m",
+      "n": 2383,
+      "skewness": -4.13,
+      "IQR_flags": 48,
+      "z_flags": 15,
+      "both": 15,
+      "IQR_only": 33,
+      "z_only": 0,
+      "min": 1.8,
+      "median": 8.68,
+      "max": 9.48,
+      "IQR_lower": 7.93,
+      "IQR_upper": 9.4,
+      "z_lower": 7.65,
+      "z_upper": 9.66
+    },
+    {
+      "variable": "Tenure (months)",
+      "column": "tenure_months",
+      "n": 2383,
+      "skewness": 1.4,
+      "IQR_flags": 73,
+      "z_flags": 45,
+      "both": 45,
+      "IQR_only": 28,
+      "z_only": 0,
+      "min": -5.0,
+      "median": 31.0,
+      "max": 164.0,
+      "IQR_lower": -31.5,
+      "IQR_upper": 100.5,
+      "z_lower": -44.48,
+      "z_upper": 119.99
+    },
+    {
+      "variable": "Overtime hrs/month",
+      "column": "avg_overtime_hours_per_month_3m",
+      "n": 2383,
+      "skewness": 2.97,
+      "IQR_flags": 445,
+      "z_flags": 61,
+      "both": 61,
+      "IQR_only": 384,
+      "z_only": 0,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 50.0,
+      "IQR_lower": 0.0,
+      "IQR_upper": 0.0,
+      "z_lower": -13.84,
+      "z_upper": 18.18
+    },
+    {
+      "variable": "Commute (km)",
+      "column": "commute_distance_km",
+      "n": 2328,
+      "skewness": 2.02,
+      "IQR_flags": 141,
+      "z_flags": 47,
+      "both": 47,
+      "IQR_only": 94,
+      "z_only": 0,
+      "min": 1.3,
+      "median": 9.7,
+      "max": 65.0,
+      "IQR_lower": -7.9,
+      "IQR_upper": 29.7,
+      "z_lower": -15.69,
+      "z_upper": 40.52
+    }
+  ],
+  "salary_typos": [
+    {
+      "employee_id": "EMP-0034",
+      "annual_fixed_pay": 4888200,
+      "pay_if_divided_by_10": 488820.0,
+      "job_level": 1
+    },
+    {
+      "employee_id": "EMP-0433",
+      "annual_fixed_pay": 18671760,
+      "pay_if_divided_by_10": 1867176.0,
+      "job_level": 3
+    },
+    {
+      "employee_id": "EMP-0601",
+      "annual_fixed_pay": 3606000,
+      "pay_if_divided_by_10": 360600.0,
+      "job_level": 2
+    }
+  ],
+  "salary_method_counts": {
+    "iqr_raw": 93,
+    "z_raw": 26,
+    "z_log": 1,
+    "z_within_level": 5,
+    "business_rule_mid_ratio": 3
+  },
+  "hours_extreme": {
+    "employee_id": "EMP-0313",
+    "avg_hours_worked_3m": 1.8,
+    "attendance_rate_3m": 0.2031
+  },
+  "label_counts": {
+    "stayed": 2034,
+    "left": 349
+  },
+  "label_rate_pct": 14.6,
+  "dummy_accuracy_pct": 85.4,
+  "imbalance_ratio": 5.8,
+  "by_source": [
+    {
+      "source": "historical_extension",
+      "rate": 15.0,
+      "n": 2000,
+      "left": 299
+    },
+    {
+      "source": "master_employee_snapshot",
+      "rate": 13.1,
+      "n": 383,
+      "left": 50
+    }
+  ],
+  "by_year": [
+    {
+      "observation_date": 2021,
+      "rate": 15.0,
+      "n": 514
+    },
+    {
+      "observation_date": 2022,
+      "rate": 13.5,
+      "n": 467
+    },
+    {
+      "observation_date": 2023,
+      "rate": 14.3,
+      "n": 446
+    },
+    {
+      "observation_date": 2024,
+      "rate": 16.3,
+      "n": 471
+    },
+    {
+      "observation_date": 2025,
+      "rate": 14.0,
+      "n": 485
+    }
+  ],
+  "by_dept": [
+    {
+      "department_id": "D10",
+      "rate": 6.5,
+      "n": 62,
+      "name": "Legal & Compliance"
+    },
+    {
+      "department_id": "D07",
+      "rate": 11.1,
+      "n": 81,
+      "name": "Human Resources"
+    },
+    {
+      "department_id": "D05",
+      "rate": 11.8,
+      "n": 102,
+      "name": "Marketing"
+    },
+    {
+      "department_id": "D03",
+      "rate": 13.2,
+      "n": 243,
+      "name": "Data & AI"
+    },
+    {
+      "department_id": "D08",
+      "rate": 13.5,
+      "n": 111,
+      "name": "Finance & Accounts"
+    },
+    {
+      "department_id": "D01",
+      "rate": 13.6,
+      "n": 806,
+      "name": "Engineering"
+    },
+    {
+      "department_id": "D04",
+      "rate": 13.9,
+      "n": 266,
+      "name": "Sales"
+    },
+    {
+      "department_id": "D02",
+      "rate": 14.3,
+      "n": 161,
+      "name": "Product & Design"
+    },
+    {
+      "department_id": "D09",
+      "rate": 17.1,
+      "n": 228,
+      "name": "Operations & IT"
+    },
+    {
+      "department_id": "D06",
+      "rate": 21.1,
+      "n": 323,
+      "name": "Customer Support"
+    }
+  ],
+  "top_clean_auc": {
+    "last_engagement_score": 0.612,
+    "months_since_last_raise": 0.599,
+    "manager_changes_12m": 0.572,
+    "comp_ratio": 0.553,
+    "wfh_share_3m": 0.552
+  },
+  "leak_table": [
+    {
+      "column": "exit_date",
+      "filled_for_leavers_%": 100.0,
+      "filled_for_stayers_%": 0.0,
+      "AUC_of_'is it filled?'": 1.0
+    },
+    {
+      "column": "resignation_date",
+      "filled_for_leavers_%": 92.0,
+      "filled_for_stayers_%": 0.0,
+      "AUC_of_'is it filled?'": 0.96
+    },
+    {
+      "column": "exit_reason",
+      "filled_for_leavers_%": 100.0,
+      "filled_for_stayers_%": 0.0,
+      "AUC_of_'is it filled?'": 1.0
+    },
+    {
+      "column": "exit_interview_done",
+      "filled_for_leavers_%": 100.0,
+      "filled_for_stayers_%": 0.0,
+      "AUC_of_'is it filled?'": 1.0
+    },
+    {
+      "column": "fnf_settlement_amount",
+      "filled_for_leavers_%": 100.0,
+      "filled_for_stayers_%": 0.0,
+      "AUC_of_'is it filled?'": 1.0
+    },
+    {
+      "column": "voluntary_left_within_12m",
+      "filled_for_leavers_%": 100.0,
+      "filled_for_stayers_%": 100.0,
+      "AUC_of_'is it filled?'": 0.96
+    }
+  ],
+  "leak_demo": [
+    {
+      "model": "Clean features",
+      "roc_auc": 0.697,
+      "roc_auc_sd": 0.028,
+      "pr_auc": 0.299
+    },
+    {
+      "model": "Clean + exit columns (LEAKY)",
+      "roc_auc": 1.0,
+      "roc_auc_sd": 0.0,
+      "pr_auc": 1.0
+    },
+    {
+      "model": "Dummy ('nobody leaves')",
+      "roc_auc": 0.5,
+      "roc_auc_sd": 0.0,
+      "pr_auc": 0.146
+    }
+  ],
+  "future_sheets": [
+    {
+      "sheet": "engagement_survey",
+      "rows": 2829,
+      "rows_after_30_Sep_2025": 595,
+      "latest_date": "2026-06-15",
+      "pct_after_snapshot": 21.0
+    },
+    {
+      "sheet": "performance_reviews",
+      "rows": 1740,
+      "rows_after_30_Sep_2025": 364,
+      "latest_date": "2026-04-01",
+      "pct_after_snapshot": 20.9
+    },
+    {
+      "sheet": "attendance_monthly_features",
+      "rows": 7339,
+      "rows_after_30_Sep_2025": 4985,
+      "latest_date": "2026-09-01",
+      "pct_after_snapshot": 67.9
+    }
+  ],
+  "answer_key": [
+    {
+      "issue_type": "DUPLICATE_ROW",
+      "planted": 6,
+      "found_by_audit": 6,
+      "extra_flags": 0,
+      "missed": 0
+    },
+    {
+      "issue_type": "NEGATIVE_TENURE",
+      "planted": 4,
+      "found_by_audit": 4,
+      "extra_flags": 0,
+      "missed": 0
+    },
+    {
+      "issue_type": "SALARY_TYPO_OUTLIER",
+      "planted": 3,
+      "found_by_audit": 3,
+      "extra_flags": 0,
+      "missed": 0
+    },
+    {
+      "issue_type": "IMPOSSIBLE_VALUE",
+      "planted": 2,
+      "found_by_audit": 2,
+      "extra_flags": 0,
+      "missed": 0
+    },
+    {
+      "issue_type": "INCONSISTENT_CATEGORY",
+      "planted": 13,
+      "found_by_audit": 13,
+      "extra_flags": 0,
+      "missed": 0
+    },
+    {
+      "issue_type": "MISSING_VALUE (commute + education)",
+      "planted": 70,
+      "found_by_audit": 70,
+      "extra_flags": 0,
+      "missed": 0
+    }
+  ],
+  "extras_beyond_key": {
+    "wfh_share_3m outside 0-1": 213,
+    "total_experience_years < tenure": 137,
+    "total_experience_years < 0": 10,
+    "avg_hours_worked_3m = 1.8 (implausible)": 1,
+    "post-snapshot rows in survey/appraisal/attendance sheets": 5944
+  },
+  "ydata": {
+    "status": "skipped (ModuleNotFoundError: No module named 'pkg_resources')",
+    "alerts": {}
+  },
+  "decisions": [
+    {
+      "id": "D01",
+      "area": "Duplicates",
+      "issue": "6 exact duplicate rows (employee appears twice)",
+      "rows": 6.0,
+      "decision": "DROP second copy",
+      "why": "Duplicates inflate scores when copies fall in train and test",
+      "task2_rule": "dedupe on all columns except row_id; GroupKFold by employee_id"
+    },
+    {
+      "id": "D02",
+      "area": "Consistency",
+      "issue": "13 city labels spelled differently (Bangalore, BENGALURU, Madras, Delhi-NCR ...)",
+      "rows": 13.0,
+      "decision": "FIX with lookup table",
+      "why": "Same city must be one category",
+      "task2_rule": "normalise_location() in src/cortexhr/audit.py"
+    },
+    {
+      "id": "D03",
+      "area": "Invalid",
+      "issue": "Negative tenure (obs. date before join date): EMP-0248, 0280, 0568, 0596",
+      "rows": 4.0,
+      "decision": "HOLD - open item O1. Raw value left unchanged; add tenure_was_invalid flag; until the team answers, EXCLUDE these 4 rows from model training (documented, not imputed)",
+      "why": "True join dates are unknown; any fix would be a guess",
+      "task2_rule": "flag tenure<0; drop flagged rows from training until O1 is closed, then apply the team's answer"
+    },
+    {
+      "id": "D04",
+      "area": "Invalid",
+      "issue": "Attendance rate above 100% (1.12)",
+      "rows": 2.0,
+      "decision": "CAP at 1.0 + FLAG",
+      "why": "Cannot exceed 100%",
+      "task2_rule": "clip(0,1)"
+    },
+    {
+      "id": "D05",
+      "area": "Invalid",
+      "issue": "wfh_share_3m outside 0-1",
+      "rows": 213.0,
+      "decision": "CLIP to 0-1",
+      "why": "Small noise (|x|<0.1); a share must lie in 0-1",
+      "task2_rule": "clip(0,1)"
+    },
+    {
+      "id": "D06",
+      "area": "Invalid",
+      "issue": "Total experience below tenure (137 rows) or negative (10 rows), all in historical rows",
+      "rows": 137.0,
+      "decision": "FLOOR at tenure in years",
+      "why": "Total experience includes time at this company",
+      "task2_rule": "total_exp=max(total_exp, tenure_months/12)"
+    },
+    {
+      "id": "D07",
+      "area": "Outlier",
+      "issue": "Salary typos: 3 values 10x too high (EMP-0034, 0433, 0601)",
+      "rows": 3.0,
+      "decision": "CORRECT (divide by 10)",
+      "why": "pay/comp_ratio disagrees with role mid-point by ~11x; /10 fits the level",
+      "task2_rule": "if pay/comp_ratio > 3x role median: pay/=10"
+    },
+    {
+      "id": "D08",
+      "area": "Outlier",
+      "issue": "Genuine high salaries (IQR flags 93, z-score 26)",
+      "rows": 93.0,
+      "decision": "KEEP",
+      "why": "Senior staff are paid more; this is real",
+      "task2_rule": "log1p(annual_fixed_pay) for linear models"
+    },
+    {
+      "id": "D09",
+      "area": "Outlier",
+      "issue": "Daily hours 1.8 / attendance 20% (EMP-0313)",
+      "rows": 1.0,
+      "decision": "KEEP + FLAG for HR review",
+      "why": "Two columns agree, so looks like a real long absence",
+      "task2_rule": "RobustScaler / tree models"
+    },
+    {
+      "id": "D10",
+      "area": "Outlier",
+      "issue": "Overtime heavy tail (81% zeros, max 50 h); tenure up to 164 m",
+      "rows": null,
+      "decision": "KEEP",
+      "why": "Plausible values; IQR over-flags zero-heavy data",
+      "task2_rule": "log1p(overtime)"
+    },
+    {
+      "id": "D11",
+      "area": "Missing",
+      "issue": "months_since_last_promotion 61% blank = never promoted",
+      "rows": 1459.0,
+      "decision": "KEEP; FILL with tenure_months; add never_promoted flag",
+      "why": "Blank carries meaning; dropping loses signal",
+      "task2_rule": "fill=tenure_months; flag"
+    },
+    {
+      "id": "D12",
+      "area": "Missing",
+      "issue": "last_raise_pct 8.5% blank = never had a raise",
+      "rows": 202.0,
+      "decision": "KEEP; FILL 0; add never_raised flag",
+      "why": "Structural blank",
+      "task2_rule": "fill=0; flag"
+    },
+    {
+      "id": "D13",
+      "area": "Missing",
+      "issue": "last_performance_rating 7.6% blank = joined <12 months ago",
+      "rows": 182.0,
+      "decision": "KEEP; FILL median; add no_rating_yet flag",
+      "why": "Structural blank",
+      "task2_rule": "median from TRAIN only; flag"
+    },
+    {
+      "id": "D14",
+      "area": "Missing",
+      "issue": "last_engagement_score 22% blank = no survey response",
+      "rows": 528.0,
+      "decision": "KEEP; FILL median; add engagement_missing flag",
+      "why": "Non-response may carry signal (16.7% vs 14.0% attrition, not significant)",
+      "task2_rule": "median by department from TRAIN only; flag"
+    },
+    {
+      "id": "D15",
+      "area": "Missing",
+      "issue": "commute_distance_km 2.3% blank",
+      "rows": 55.0,
+      "decision": "FILL median by city; add flag",
+      "why": "Random gap, small",
+      "task2_rule": "median by city from TRAIN only; flag"
+    },
+    {
+      "id": "D16",
+      "area": "Missing",
+      "issue": "highest_education 0.6% blank",
+      "rows": 15.0,
+      "decision": "FILL 'Unknown'",
+      "why": "Random gap, categorical",
+      "task2_rule": "constant 'Unknown'"
+    },
+    {
+      "id": "D17",
+      "area": "Imbalance",
+      "issue": "14.6% left, 85.4% stayed (5.8 : 1)",
+      "rows": 349.0,
+      "decision": "KEEP the data as is; no copying rows",
+      "why": "Real-world rate; oversampling before splitting leaks",
+      "task2_rule": "StratifiedGroupKFold; class_weight='balanced'; metrics = ROC-AUC, PR-AUC, recall@top-10%"
+    },
+    {
+      "id": "D18",
+      "area": "Leakage",
+      "issue": "exit_date, resignation_date, exit_reason, exit_interview_done, fnf_settlement_amount (post-outcome)",
+      "rows": null,
+      "decision": "DROP before any modelling",
+      "why": "Exist only after the outcome; give AUC 1.0",
+      "task2_rule": "assert none of LEAKAGE_COLUMNS in feature matrix"
+    },
+    {
+      "id": "D19",
+      "area": "Leakage",
+      "issue": "voluntary_left_within_12m (sub-label of the target)",
+      "rows": null,
+      "decision": "DROP",
+      "why": "Derived from the answer",
+      "task2_rule": "same assertion"
+    },
+    {
+      "id": "D20",
+      "area": "Leakage",
+      "issue": "Survey, appraisal and attendance sheets include data after 30 Sep 2025",
+      "rows": null,
+      "decision": "CUT OFF at observation_date when building features",
+      "why": "Future information would leak in",
+      "task2_rule": "filter date <= observation_date"
+    },
+    {
+      "id": "D21",
+      "area": "Non-features",
+      "issue": "row_id, employee_id, source, observation_date",
+      "rows": null,
+      "decision": "EXCLUDE from features (employee_id for grouping; observation_date for time split)",
+      "why": "Identifiers/provenance, not employee traits",
+      "task2_rule": "NON_FEATURE_COLUMNS"
+    },
+    {
+      "id": "D22",
+      "area": "Fairness",
+      "issue": "gender and age are held in a separate sheet",
+      "rows": null,
+      "decision": "KEEP OUT of the feature set; use only to test fairness (Task 17)",
+      "why": "Avoid direct discrimination; still need them to test for bias",
+      "task2_rule": "never join protected_attributes into X"
+    },
+    {
+      "id": "D24",
+      "area": "Leakage (unconfirmed)",
+      "issue": "dept_attrition_rate_prior_12m: cut-off date not confirmed",
+      "rows": null,
+      "decision": "HOLD - open item O2. Keep as a CANDIDATE feature; train every model with and without it and report both until confirmed",
+      "why": "If it used exits after the observation date it would leak the answer; the evidence so far is only consistent with a backward-looking calculation",
+      "task2_rule": "two feature sets (with/without); drop it if the team says it uses post-observation exits"
+    },
+    {
+      "id": "D23",
+      "area": "Process",
+      "issue": "Imputation, scaling and encoding must not see the test data",
+      "rows": null,
+      "decision": "FIT on training fold only (sklearn Pipeline)",
+      "why": "Otherwise test information leaks in",
+      "task2_rule": "all transforms inside Pipeline/ColumnTransformer"
+    }
+  ],
+  "dept_rate_check": {
+    "constant_within_dept_real_rows": true,
+    "mean_abs_diff_prior_pts": 0.7,
+    "mean_abs_diff_next_pts": 10.8,
+    "table": [
+      {
+        "department_id": "D01",
+        "dataset_value": 0.1448,
+        "exits_in_prior_12m": 0.1469,
+        "exits_in_next_12m": 0.1366,
+        "abs_diff_vs_prior": 0.0021,
+        "abs_diff_vs_next": 0.0082
+      },
+      {
+        "department_id": "D02",
+        "dataset_value": 0.0,
+        "exits_in_prior_12m": 0.0,
+        "exits_in_next_12m": 0.2368,
+        "abs_diff_vs_prior": 0.0,
+        "abs_diff_vs_next": 0.2368
+      },
+      {
+        "department_id": "D03",
+        "dataset_value": 0.0556,
+        "exits_in_prior_12m": 0.0632,
+        "exits_in_next_12m": 0.1419,
+        "abs_diff_vs_prior": 0.0076,
+        "abs_diff_vs_next": 0.0863
+      },
+      {
+        "department_id": "D04",
+        "dataset_value": 0.2051,
+        "exits_in_prior_12m": 0.2069,
+        "exits_in_next_12m": 0.1387,
+        "abs_diff_vs_prior": 0.0018,
+        "abs_diff_vs_next": 0.0664
+      },
+      {
+        "department_id": "D05",
+        "dataset_value": 0.1667,
+        "exits_in_prior_12m": 0.192,
+        "exits_in_next_12m": 0.0,
+        "abs_diff_vs_prior": 0.0253,
+        "abs_diff_vs_next": 0.1667
+      },
+      {
+        "department_id": "D06",
+        "dataset_value": 0.2826,
+        "exits_in_prior_12m": 0.2694,
+        "exits_in_next_12m": 0.0573,
+        "abs_diff_vs_prior": 0.0132,
+        "abs_diff_vs_next": 0.2253
+      },
+      {
+        "department_id": "D07",
+        "dataset_value": 0.0,
+        "exits_in_prior_12m": 0.0,
+        "exits_in_next_12m": 0.1765,
+        "abs_diff_vs_prior": 0.0,
+        "abs_diff_vs_next": 0.1765
+      },
+      {
+        "department_id": "D08",
+        "dataset_value": 0.2353,
+        "exits_in_prior_12m": 0.2412,
+        "exits_in_next_12m": 0.1846,
+        "abs_diff_vs_prior": 0.0059,
+        "abs_diff_vs_next": 0.0507
+      },
+      {
+        "department_id": "D09",
+        "dataset_value": 0.2069,
+        "exits_in_prior_12m": 0.2017,
+        "exits_in_next_12m": 0.2658,
+        "abs_diff_vs_prior": 0.0052,
+        "abs_diff_vs_next": 0.0589
+      },
+      {
+        "department_id": "D10",
+        "dataset_value": 0.1,
+        "exits_in_prior_12m": 0.1081,
+        "exits_in_next_12m": 0.1071,
+        "abs_diff_vs_prior": 0.0081,
+        "abs_diff_vs_next": 0.0071
+      }
+    ]
+  },
+  "open_items": [
+    {
+      "id": "O1",
+      "question": "Negative tenure: what are the correct joining dates for EMP-0248, EMP-0280, EMP-0568 and EMP-0596?",
+      "why_it_matters": "Tenure is negative (-4, -5, -2, -1 months), which is impossible. Without the join dates any fix is a guess.",
+      "evidence_so_far": "All 4 are real employees observed on 30 Sep 2025, all label = 0. No join dates exist elsewhere in the workbook.",
+      "handling_meanwhile": "Raw values untouched. A tenure_was_invalid flag will be added in Task 2. The 4 rows are excluded from model training until answered (documented, not imputed).",
+      "owner": "Python team",
+      "status": "OPEN",
+      "team_response": "(pending - record here)",
+      "date_answered": "",
+      "final_action": ""
+    },
+    {
+      "id": "O2",
+      "question": "Is dept_attrition_rate_prior_12m calculated ONLY from employee exits that occurred before each row's observation date?",
+      "why_it_matters": "If it includes exits after the observation date it leaks the answer (the department's own future exits).",
+      "evidence_so_far": "For the 383 real rows the value is constant within each department and is on average 0.7 points from the exits-in-the-prior-12-months rate computed from monthly_headcount_history, versus 10.8 points from the following 12 months. This is consistent with a backward-looking calculation but is NOT proof; the 2,000 historical rows were not tested.",
+      "handling_meanwhile": "Kept as a candidate feature, not assumed safe. Every model is trained and reported with AND without it until answered.",
+      "owner": "Python team",
+      "status": "OPEN",
+      "team_response": "(pending - record here)",
+      "date_answered": "",
+      "final_action": ""
+    },
+    {
+      "id": "O3",
+      "question": "(Additional observation) Why do only the 2,000 simulated rows have total experience below tenure (137 rows)?",
+      "why_it_matters": "Suggests the two sources were generated by different logic; matters if the pipeline treats them as one population.",
+      "evidence_so_far": "0 such rows among the 383 real employees; 137 among simulated rows.",
+      "handling_meanwhile": "Rule D06 (floor experience at tenure) applied and documented; revisit if the team explains the cause.",
+      "owner": "Python team",
+      "status": "OPEN (lower priority)",
+      "team_response": "(pending - record here)",
+      "date_answered": "",
+      "final_action": ""
+    }
+  ]
+}

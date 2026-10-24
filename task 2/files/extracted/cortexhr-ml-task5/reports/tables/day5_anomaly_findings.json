@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-10-23 21:23:02",
+  "contamination": 0.03,
+  "features": [
+    "scheduled_days",
+    "present_days",
+    "half_days_unpaid",
+    "paid_leave_days",
+    "unpaid_absence_days",
+    "longest_unpaid_streak_days",
+    "late_arrivals",
+    "avg_hours_worked",
+    "overtime_hours",
+    "attendance_rate"
+  ],
+  "total_records": 7339,
+  "total_flagged": 255,
+  "injected_labels": 150,
+  "metrics": {
+    "model_only": {
+      "precision": 0.40271493212669685,
+      "recall": 0.5933333333333334,
+      "f1": 0.4797843665768194,
+      "true_positives": 89,
+      "false_positives": 132,
+      "false_negatives": 61,
+      "flagged": 221,
+      "injected": 150,
+      "flagged_pct_of_all": 0.030113094427033655,
+      "catch_rate": 0.5933333333333334
+    },
+    "rules_only": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "true_positives": 50,
+      "false_positives": 0,
+      "false_negatives": 100,
+      "flagged": 50,
+      "injected": 150,
+      "flagged_pct_of_all": 0.0068129172911840855,
+      "catch_rate": 0.3333333333333333
+    },
+    "combined": {
+      "precision": 0.4823529411764706,
+      "recall": 0.82,
+      "f1": 0.6074074074074074,
+      "true_positives": 123,
+      "false_positives": 132,
+      "false_negatives": 27,
+      "flagged": 255,
+      "injected": 150,
+      "flagged_pct_of_all": 0.03474587818503883,
+      "catch_rate": 0.82
+    }
+  },
+  "baseline_comparison": {
+    "baseline_precision": 0.403,
+    "baseline_recall": 0.593,
+    "our_precision": 0.4824,
+    "our_recall": 0.82,
+    "precision_gain": 0.0794,
+    "recall_gain": 0.227
+  },
+  "missed_anomalies": {
+    "total_missed": 27,
+    "by_type": [
+      {
+        "anomaly_type": "ABSENCE_STREAK",
+        "injected_count": 40,
+        "missed_count": 0,
+        "caught_count": 40,
+        "catch_rate_pct": 100.0
+      },
+      {
+        "anomaly_type": "IMPOSSIBLE_HOURS",
+        "injected_count": 35,
+        "missed_count": 0,
+        "caught_count": 35,
+        "catch_rate_pct": 100.0
+      },
+      {
+        "anomaly_type": "LATE_SPIKE",
+        "injected_count": 30,
+        "missed_count": 27,
+        "caught_count": 3,
+        "catch_rate_pct": 10.0
+      },
+      {
+        "anomaly_type": "SUDDEN_DROP",
+        "injected_count": 30,
+        "missed_count": 0,
+        "caught_count": 30,
+        "catch_rate_pct": 100.0
+      },
+      {
+        "anomaly_type": "ZERO_ATTENDANCE",
+        "injected_count": 15,
+        "missed_count": 0,
+        "caught_count": 15,
+        "catch_rate_pct": 100.0
+      }
+    ],
+    "root_cause": "Isolation Forest operates in 10-dimensional space where LATE_SPIKE records exhibit 9 completely normal feature values (100% attendance rate, 0 unpaid absences, normal working hours). Unsupervised random partition cuts rarely isolate such records early without a specific business rule on late arrivals."
+  },
+  "priority_bands": [
+    {
+      "priority": "High",
+      "total_flagged": 97,
+      "true_anomalies": 62,
+      "min_priority_score": 0.1455048164700905,
+      "mean_priority_score": 0.2937594782526533,
+      "max_priority_score": 0.5143181932767267,
+      "precision_pct": 63.9
+    },
+    {
+      "priority": "Medium",
+      "total_flagged": 73,
+      "true_anomalies": 48,
+      "min_priority_score": 0.06093999641716841,
+      "mean_priority_score": 0.09979817595466345,
+      "max_priority_score": 0.1422375549782855,
+      "precision_pct": 65.8
+    },
+    {
+      "priority": "Low",
+      "total_flagged": 85,
+      "true_anomalies": 13,
+      "min_priority_score": 3.5518897859021514e-05,
+      "mean_priority_score": 0.024086984221099398,
+      "max_priority_score": 0.06085241219037141,
+      "precision_pct": 15.3
+    }
+  ]
+}

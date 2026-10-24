@@ -1,0 +1,129 @@
+{
+  "include_unconfirmed": false,
+  "row_report": {
+    "rows_in": 2389,
+    "duplicates_dropped": 6,
+    "negative_tenure_excluded": 4,
+    "negative_tenure_ids": [
+      "EMP-0248",
+      "EMP-0280",
+      "EMP-0568",
+      "EMP-0596"
+    ],
+    "rows_out": 2379
+  },
+  "monthly_join": {
+    "rows_in": 2379,
+    "rows_out": 2379,
+    "window_months": 3,
+    "lag_months": 0,
+    "windows_used": {
+      "2025-09-30": [
+        "2025-07-01",
+        "2025-09-01"
+      ],
+      "2025-03-01": [
+        "2024-12-01",
+        "2025-02-01"
+      ],
+      "2024-12-30": [
+        "2024-09-01",
+        "2024-11-01"
+      ],
+      "2022-08-16": [
+        "2022-05-01",
+        "2022-07-01"
+      ],
+      "2021-12-27": [
+        "2021-09-01",
+        "2021-11-01"
+      ]
+    },
+    "duplicate_rows_removed": {
+      "attendance_monthly_features": 0,
+      "payroll_monthly_features": 15
+    },
+    "rows_with_attendance_data": 379,
+    "rows_without_attendance_data": 2000,
+    "rows_with_payroll_data": 379,
+    "attendance_months_in_window_counts": {
+      "0": 2000,
+      "1": 3,
+      "2": 10,
+      "3": 366
+    },
+    "payroll_months_in_window_counts": {
+      "0": 2000,
+      "1": 3,
+      "2": 10,
+      "3": 366
+    },
+    "latest_month_used": "2025-09-01",
+    "no_look_ahead": true
+  },
+  "input_columns": {
+    "numeric": [
+      "job_level",
+      "tenure_months",
+      "total_experience_years",
+      "previous_employers_count",
+      "commute_distance_km",
+      "annual_fixed_pay",
+      "comp_ratio",
+      "raises_received",
+      "last_raise_pct",
+      "months_since_last_raise",
+      "promotions_received",
+      "months_since_last_promotion",
+      "internal_transfers",
+      "last_performance_rating",
+      "last_engagement_score",
+      "manager_changes_12m",
+      "training_hours_12m",
+      "attendance_rate_3m",
+      "late_arrivals_3m",
+      "avg_overtime_hours_per_month_3m",
+      "avg_hours_worked_3m",
+      "wfh_share_3m",
+      "unpaid_leave_days_6m",
+      "paid_leave_days_6m"
+    ],
+    "monthly": [
+      "attendance_rate_change_3m",
+      "avg_unpaid_absence_days_3m",
+      "avg_variable_pay_3m"
+    ],
+    "categorical": [
+      "department_id",
+      "role_id",
+      "work_location",
+      "work_mode",
+      "employment_type",
+      "highest_education"
+    ]
+  },
+  "n_input_columns": 33,
+  "train_shape": [
+    1903,
+    132
+  ],
+  "test_shape": [
+    476,
+    132
+  ],
+  "n_output_columns": 132,
+  "train_leaver_rate": 0.1466,
+  "test_leaver_rate": 0.1471,
+  "missing_indicator_columns": [
+    "num__missingindicator_commute_distance_km",
+    "num__missingindicator_last_performance_rating",
+    "num__missingindicator_last_engagement_score"
+  ],
+  "flag_columns": [
+    "flags__never_promoted",
+    "flags__never_raised"
+  ],
+  "nan_in_output": 0,
+  "inf_in_output": 0,
+  "seed": 42
+}

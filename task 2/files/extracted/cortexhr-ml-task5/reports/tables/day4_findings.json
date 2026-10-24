@@ -1,0 +1,505 @@
+{
+  "rows": 2379,
+  "leavers": 349,
+  "prevalence": 0.14670029424127784,
+  "report_as_trained": {
+    "n": 2379,
+    "leavers": 349,
+    "prevalence": 0.14670029424127784,
+    "roc_auc": 0.7102530805820995,
+    "pr_auc": 0.2982155177248967,
+    "pr_auc_baseline": 0.14670029424127784,
+    "top_frac": 0.1,
+    "top_k_people": 238,
+    "precision_at_top": 0.3319327731092437,
+    "recall_at_top": 0.22636103151862463,
+    "lift_at_top": 2.26265921841516,
+    "threshold": 0.5,
+    "flagged_share": 0.3526691887347625,
+    "precision": 0.2634088200238379,
+    "recall": 0.6332378223495702,
+    "f1": 0.3720538720538721,
+    "accuracy": 0.6864228667507356,
+    "brier": 0.20611265094112283,
+    "brier_baseline": 0.12517931791080034,
+    "log_loss": 0.601411303090494
+  },
+  "calibration_as_trained": {
+    "ece": 0.25875233404934256,
+    "mean_predicted": 0.40545262829062045,
+    "table": [
+      {
+        "bin": 1,
+        "people": 238,
+        "mean_predicted": 0.050786758567776626,
+        "observed_rate": 0.03361344537815126,
+        "leavers": 8
+      },
+      {
+        "bin": 2,
+        "people": 238,
+        "mean_predicted": 0.13008980350147514,
+        "observed_rate": 0.046218487394957986,
+        "leavers": 11
+      },
+      {
+        "bin": 3,
+        "people": 238,
+        "mean_predicted": 0.2025731550607024,
+        "observed_rate": 0.09663865546218488,
+        "leavers": 23
+      },
+      {
+        "bin": 4,
+        "people": 238,
+        "mean_predicted": 0.2694484843692549,
+        "observed_rate": 0.07983193277310924,
+        "leavers": 19
+      },
+      {
+        "bin": 5,
+        "people": 237,
+        "mean_predicted": 0.34060237496008333,
+        "observed_rate": 0.08860759493670886,
+        "leavers": 21
+      },
+      {
+        "bin": 6,
+        "people": 238,
+        "mean_predicted": 0.4177017659577512,
+        "observed_rate": 0.1134453781512605,
+        "leavers": 27
+      },
+      {
+        "bin": 7,
+        "people": 238,
+        "mean_predicted": 0.5014624182719286,
+        "observed_rate": 0.20168067226890757,
+        "leavers": 48
+      },
+      {
+        "bin": 8,
+        "people": 238,
+        "mean_predicted": 0.5949751600260434,
+        "observed_rate": 0.21008403361344538,
+        "leavers": 50
+      },
+      {
+        "bin": 9,
+        "people": 238,
+        "mean_predicted": 0.700712744176254,
+        "observed_rate": 0.2647058823529412,
+        "leavers": 63
+      },
+      {
+        "bin": 10,
+        "people": 238,
+        "mean_predicted": 0.845901137958924,
+        "observed_rate": 0.3319327731092437,
+        "leavers": 79
+      }
+    ]
+  },
+  "report_calibrated": {
+    "n": 2379,
+    "leavers": 349,
+    "prevalence": 0.14670029424127784,
+    "roc_auc": 0.7105325560715344,
+    "pr_auc": 0.29638045627346044,
+    "pr_auc_baseline": 0.14670029424127784,
+    "top_frac": 0.1,
+    "top_k_people": 238,
+    "precision_at_top": 0.3319327731092437,
+    "recall_at_top": 0.22636103151862463,
+    "lift_at_top": 2.26265921841516,
+    "threshold": 0.5,
+    "flagged_share": 0.006305170239596469,
+    "precision": 0.5333333333333333,
+    "recall": 0.022922636103151862,
+    "f1": 0.04395604395604396,
+    "accuracy": 0.8537200504413619,
+    "brier": 0.11597965792469897,
+    "brier_baseline": 0.12517931791080034,
+    "log_loss": 0.38161322924023966
+  },
+  "calibration_calibrated": {
+    "ece": 0.019357627469380564,
+    "mean_predicted": 0.15101500610366506,
+    "table": [
+      {
+        "bin": 1,
+        "people": 238,
+        "mean_predicted": 0.0407521403133747,
+        "observed_rate": 0.029411764705882353,
+        "leavers": 7
+      },
+      {
+        "bin": 2,
+        "people": 238,
+        "mean_predicted": 0.06779026697931848,
+        "observed_rate": 0.058823529411764705,
+        "leavers": 14
+      },
+      {
+        "bin": 3,
+        "people": 238,
+        "mean_predicted": 0.0864972156990171,
+        "observed_rate": 0.08823529411764706,
+        "leavers": 21
+      },
+      {
+        "bin": 4,
+        "people": 238,
+        "mean_predicted": 0.10439365298520192,
+        "observed_rate": 0.08403361344537816,
+        "leavers": 20
+      },
+      {
+        "bin": 5,
+        "people": 237,
+        "mean_predicted": 0.12207038034042882,
+        "observed_rate": 0.07172995780590717,
+        "leavers": 17
+      },
+      {
+        "bin": 6,
+        "people": 238,
+        "mean_predicted": 0.14111020939788246,
+        "observed_rate": 0.13025210084033614,
+        "leavers": 31
+      },
+      {
+        "bin": 7,
+        "people": 238,
+        "mean_predicted": 0.16446498879663182,
+        "observed_rate": 0.19747899159663865,
+        "leavers": 47
+      },
+      {
+        "bin": 8,
+        "people": 238,
+        "mean_predicted": 0.1951772411478825,
+        "observed_rate": 0.20588235294117646,
+        "leavers": 49
+      },
+      {
+        "bin": 9,
+        "people": 238,
+        "mean_predicted": 0.23918178076605426,
+        "observed_rate": 0.2689075630252101,
+        "leavers": 64
+      },
+      {
+        "bin": 10,
+        "people": 238,
+        "mean_predicted": 0.348590568536223,
+        "observed_rate": 0.3319327731092437,
+        "leavers": 79
+      }
+    ]
+  },
+  "bands": [
+    {
+      "band": "High",
+      "people": 238,
+      "share_of_people": 0.10004203446826397,
+      "leavers": 79,
+      "leaver_rate": 0.3319327731092437,
+      "lift": 2.26265921841516,
+      "share_of_all_leavers": 0.22636103151862463
+    },
+    {
+      "band": "Medium",
+      "people": 476,
+      "share_of_people": 0.20008406893652794,
+      "leavers": 113,
+      "leaver_rate": 0.23739495798319327,
+      "lift": 1.618230960005779,
+      "share_of_all_leavers": 0.3237822349570201
+    },
+    {
+      "band": "Low",
+      "people": 1665,
+      "share_of_people": 0.699873896595208,
+      "leavers": 157,
+      "leaver_rate": 0.0942942942942943,
+      "lift": 0.6427682697023672,
+      "share_of_all_leavers": 0.4498567335243553
+    }
+  ],
+  "high_band_ci": {
+    "precision": [
+      0.27310924369747897,
+      0.3907563025210084
+    ],
+    "recall": [
+      0.19141073343003093,
+      0.2633123629886737
+    ]
+  },
+  "band_calibration": {
+    "average calibrated score": {
+      "High": 0.3486,
+      "Medium": 0.2172,
+      "Low": 0.1039
+    },
+    "actual leaver rate": {
+      "High": 0.3319,
+      "Medium": 0.2374,
+      "Low": 0.0943
+    }
+  },
+  "bands_changed_vs_as_trained": 68,
+  "lift_table": [
+    {
+      "group": 1,
+      "people": 238,
+      "leavers": 79,
+      "leaver_rate": 0.3319327731092437,
+      "lift": 2.26265921841516,
+      "cumulative_share_of_leavers": 0.22636103151862463,
+      "cumulative_share_of_people": 0.10004203446826397
+    },
+    {
+      "group": 2,
+      "people": 238,
+      "leavers": 64,
+      "leaver_rate": 0.2689075630252101,
+      "lift": 1.8330403794755725,
+      "cumulative_share_of_leavers": 0.40974212034383956,
+      "cumulative_share_of_people": 0.20008406893652794
+    },
+    {
+      "group": 3,
+      "people": 238,
+      "leavers": 49,
+      "leaver_rate": 0.20588235294117646,
+      "lift": 1.4034215405359851,
+      "cumulative_share_of_leavers": 0.5501432664756447,
+      "cumulative_share_of_people": 0.30012610340479196
+    },
+    {
+      "group": 4,
+      "people": 238,
+      "leavers": 47,
+      "leaver_rate": 0.19747899159663865,
+      "lift": 1.3461390286773736,
+      "cumulative_share_of_leavers": 0.6848137535816619,
+      "cumulative_share_of_people": 0.4001681378730559
+    },
+    {
+      "group": 5,
+      "people": 238,
+      "leavers": 31,
+      "leaver_rate": 0.13025210084033614,
+      "lift": 0.8878789338084805,
+      "cumulative_share_of_leavers": 0.7736389684813754,
+      "cumulative_share_of_people": 0.5002101723413199
+    },
+    {
+      "group": 6,
+      "people": 238,
+      "leavers": 17,
+      "leaver_rate": 0.07142857142857142,
+      "lift": 0.48690135079819896,
+      "cumulative_share_of_leavers": 0.8223495702005731,
+      "cumulative_share_of_people": 0.6002522068095839
+    },
+    {
+      "group": 7,
+      "people": 238,
+      "leavers": 20,
+      "leaver_rate": 0.08403361344537816,
+      "lift": 0.5728251185861165,
+      "cumulative_share_of_leavers": 0.8796561604584527,
+      "cumulative_share_of_people": 0.7002942412778478
+    },
+    {
+      "group": 8,
+      "people": 238,
+      "leavers": 21,
+      "leaver_rate": 0.08823529411764706,
+      "lift": 0.6014663745154223,
+      "cumulative_share_of_leavers": 0.9398280802292264,
+      "cumulative_share_of_people": 0.8003362757461118
+    },
+    {
+      "group": 9,
+      "people": 238,
+      "leavers": 14,
+      "leaver_rate": 0.058823529411764705,
+      "lift": 0.40097758301028147,
+      "cumulative_share_of_leavers": 0.9799426934097422,
+      "cumulative_share_of_people": 0.9003783102143758
+    },
+    {
+      "group": 10,
+      "people": 237,
+      "leavers": 7,
+      "leaver_rate": 0.029535864978902954,
+      "lift": 0.20133473577309494,
+      "cumulative_share_of_leavers": 1.0,
+      "cumulative_share_of_people": 1.0
+    }
+  ],
+  "top10": {
+    "people": 238,
+    "found": 79,
+    "random_expected": 34.9,
+    "lift": 2.2636103151862463
+  },
+  "per_fold": [
+    {
+      "fold": 1,
+      "people": 476,
+      "leavers": 70,
+      "roc_auc": 0.6805066854327938,
+      "pr_auc": 0.32010563748859816,
+      "precision_top10%": 0.3333333333333333,
+      "recall_top10%": 0.22857142857142856,
+      "lift_top10%": 2.2666666666666666
+    },
+    {
+      "fold": 2,
+      "people": 476,
+      "leavers": 70,
+      "roc_auc": 0.7355735397607319,
+      "pr_auc": 0.33189657378356785,
+      "precision_top10%": 0.3125,
+      "recall_top10%": 0.21428571428571427,
+      "lift_top10%": 2.125
+    },
+    {
+      "fold": 3,
+      "people": 476,
+      "leavers": 70,
+      "roc_auc": 0.7184377199155525,
+      "pr_auc": 0.31874462321594266,
+      "precision_top10%": 0.3333333333333333,
+      "recall_top10%": 0.22857142857142856,
+      "lift_top10%": 2.2666666666666666
+    },
+    {
+      "fold": 4,
+      "people": 476,
+      "leavers": 70,
+      "roc_auc": 0.7126319493314567,
+      "pr_auc": 0.28093472120961493,
+      "precision_top10%": 0.375,
+      "recall_top10%": 0.2571428571428571,
+      "lift_top10%": 2.55
+    },
+    {
+      "fold": 5,
+      "people": 475,
+      "leavers": 69,
+      "roc_auc": 0.7156064824730493,
+      "pr_auc": 0.30168918999952576,
+      "precision_top10%": 0.375,
+      "recall_top10%": 0.2608695652173913,
+      "lift_top10%": 2.5815217391304346
+    }
+  ],
+  "per_fold_summary": {
+    "roc_auc": {
+      "mean": 0.713,
+      "std": 0.02
+    },
+    "pr_auc": {
+      "mean": 0.311,
+      "std": 0.02
+    },
+    "precision_top10%": {
+      "mean": 0.346,
+      "std": 0.028
+    },
+    "recall_top10%": {
+      "mean": 0.238,
+      "std": 0.02
+    },
+    "lift_top10%": {
+      "mean": 2.358,
+      "std": 0.199
+    }
+  },
+  "per_source": [
+    {
+      "rows": "historical_extension",
+      "people": 2000,
+      "leavers": 299,
+      "roc_auc": 0.714,
+      "roc_auc_95%": "0.68 to 0.75",
+      "in High band": 218,
+      "leavers in High": 73,
+      "High-band leaver rate": 0.335,
+      "share of this source's leavers in High": 0.244
+    },
+    {
+      "rows": "master_employee_snapshot",
+      "people": 379,
+      "leavers": 50,
+      "roc_auc": 0.691,
+      "roc_auc_95%": "0.61 to 0.77",
+      "in High band": 20,
+      "leavers in High": 6,
+      "High-band leaver rate": 0.3,
+      "share of this source's leavers in High": 0.12
+    }
+  ],
+  "metrics_table": [
+    {
+      "model": "Dummy (always stays)",
+      "ROC-AUC": 0.5,
+      "PR-AUC": 0.14670029424127784,
+      "top-10% precision": 0.14626050420168066,
+      "top-10% recall": 0.09974212034383954,
+      "top-10% lift": 0.9970021188991356,
+      "precision @0.5": 0.0,
+      "recall @0.5": 0.0,
+      "accuracy @0.5": 0.8532997057587223,
+      "Brier": 0.14670029424127784,
+      "note": "all scores tied; top 10% = random pick (average of 200)"
+    },
+    {
+      "model": "Logistic regression, balanced (Task 3)",
+      "ROC-AUC": 0.7102530805820995,
+      "PR-AUC": 0.2982155177248967,
+      "top-10% precision": 0.3319327731092437,
+      "top-10% recall": 0.22636103151862463,
+      "top-10% lift": 2.26265921841516,
+      "precision @0.5": 0.2634088200238379,
+      "recall @0.5": 0.6332378223495702,
+      "accuracy @0.5": 0.6864228667507356,
+      "Brier": 0.20611265094112283,
+      "note": "ranking score, NOT a probability"
+    },
+    {
+      "model": "Logistic regression, balanced + calibration",
+      "ROC-AUC": 0.7105325560715344,
+      "PR-AUC": 0.29638045627346044,
+      "top-10% precision": 0.3319327731092437,
+      "top-10% recall": 0.22636103151862463,
+      "top-10% lift": 2.26265921841516,
+      "precision @0.5": NaN,
+      "recall @0.5": NaN,
+      "accuracy @0.5": NaN,
+      "Brier": 0.11597965792469897,
+      "note": "used for bands and the note; only 15 people reach 50%, so 0.5 yes/no is not meaningful"
+    },
+    {
+      "model": "Decision tree, depth 4, balanced",
+      "ROC-AUC": 0.6452834982426922,
+      "PR-AUC": 0.24755091903167592,
+      "top-10% precision": 0.3288865546218488,
+      "top-10% recall": 0.22428366762177654,
+      "top-10% lift": 2.241894307866413,
+      "precision @0.5": 0.23612903225806456,
+      "recall @0.5": 0.5243553008595987,
+      "accuracy @0.5": 0.6813787305590583,
+      "Brier": 0.22116440145091595,
+      "note": "few distinct scores; top 10% = average of 200 random tie-breaks"
+    }
+  ],
+  "note_words": 414,
+  "random_state": 42
+}

@@ -1,0 +1,37 @@
+services:
+  jupyter:                      # docker compose up jupyter  ->  http://localhost:8888
+    build: .
+    ports: ["8888:8888"]
+    volumes: &vols
+      - ./data:/app/data
+      - ./notebooks:/app/notebooks
+      - ./reports:/app/reports
+      - ./docs:/app/docs
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+      - ./tests:/app/tests
+
+  audit:                        # docker compose run --rm audit  ->  re-runs the whole Task 1 audit headlessly
+    build: .
+    volumes: *vols
+    command: ["python", "scripts/run_audit.py"]
+
+  pipeline:                     # docker compose run --rm pipeline  ->  Day 2: build features, fit on train, transform train/test
+    build: .
+    volumes: *vols
+    command: ["python", "scripts/run_pipeline.py"]
+
+  baselines:                    # docker compose run --rm baselines  ->  Day 3: re-runs notebooks/02_baselines.ipynb
+    build: .
+    volumes: *vols
+    command: ["python", "scripts/run_notebook.py", "notebooks/02_baselines.ipynb"]
+
+  evaluation:                   # docker compose run --rm evaluation  ->  Day 4: re-runs notebooks/03_evaluation.ipynb
+    build: .
+    volumes: *vols
+    command: ["python", "scripts/run_notebook.py", "notebooks/03_evaluation.ipynb"]
+
+  test:                         # docker compose run --rm test
+    build: .
+    volumes: *vols
+    command: ["pytest", "-q"]

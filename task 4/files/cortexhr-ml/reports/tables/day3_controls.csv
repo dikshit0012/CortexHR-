@@ -1,0 +1,6 @@
+"logistic regression, feature set",input columns,ROC-AUC (pooled),check,rows,n,leavers,ROC-AUC,bootstrap 95% interval
+main feature set,33.0,0.7103,feature set,,,,,
+without the monthly attendance/payroll features,30.0,0.7105,feature set,,,,,
+with the UNCONFIRMED dept_attrition_rate_prior_12m,34.0,0.7095,feature set,,,,,
+,,,row source,historical_extension,2000.0,299.0,0.714,0.68 to 0.74
+,,,row source,master_employee_snapshot,379.0,50.0,0.688,0.61 to 0.76

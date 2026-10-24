@@ -1,0 +1,6 @@
+anomaly_type,injected_count,missed_count,caught_count,catch_rate_pct
+ABSENCE_STREAK,40,0,40,100.0
+IMPOSSIBLE_HOURS,35,0,35,100.0
+LATE_SPIKE,30,27,3,10.0
+SUDDEN_DROP,30,0,30,100.0
+ZERO_ATTENDANCE,15,0,15,100.0

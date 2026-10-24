@@ -1,0 +1,46 @@
+[
+  {
+    "approach":"Workbook Baseline (Ref Isolation Forest)",
+    "flagged":221,
+    "injected":150,
+    "precision":0.403,
+    "recall_catch_rate":0.593,
+    "f1_score":0.4799,
+    "tp":89,
+    "fp":132,
+    "fn":61
+  },
+  {
+    "approach":"Our Isolation Forest (Model Only)",
+    "flagged":221,
+    "injected":150,
+    "precision":0.4027,
+    "recall_catch_rate":0.5933,
+    "f1_score":0.4798,
+    "tp":89,
+    "fp":132,
+    "fn":61
+  },
+  {
+    "approach":"Business Rules Only (Zero Attendance + Impossible Hours)",
+    "flagged":50,
+    "injected":150,
+    "precision":1.0,
+    "recall_catch_rate":0.3333,
+    "f1_score":0.5,
+    "tp":50,
+    "fp":0,
+    "fn":100
+  },
+  {
+    "approach":"Our Combined Pipeline (Model OR Business Rules)",
+    "flagged":255,
+    "injected":150,
+    "precision":0.4824,
+    "recall_catch_rate":0.82,
+    "f1_score":0.6074,
+    "tp":123,
+    "fp":132,
+    "fn":27
+  }
+]

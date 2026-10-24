@@ -1,0 +1,3 @@
+rows,people,leavers,roc_auc,roc_auc_95%,in High band,leavers in High,High-band leaver rate,share of this source's leavers in High
+historical_extension,2000,299,0.714,0.68 to 0.75,218,73,0.335,0.244
+master_employee_snapshot,379,50,0.691,0.61 to 0.77,20,6,0.3,0.12

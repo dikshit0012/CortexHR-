@@ -1,0 +1,5 @@
+approach,flagged,injected,precision,recall_catch_rate,f1_score,tp,fp,fn
+Workbook Baseline (Ref Isolation Forest),221,150,0.403,0.593,0.4799,89,132,61
+Our Isolation Forest (Model Only),221,150,0.4027,0.5933,0.4798,89,132,61
+Business Rules Only (Zero Attendance + Impossible Hours),50,150,1.0,0.3333,0.5,50,0,100
+Our Combined Pipeline (Model OR Business Rules),255,150,0.4824,0.82,0.6074,123,132,27

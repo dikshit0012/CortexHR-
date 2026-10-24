@@ -1,0 +1,12 @@
+,missing_n,missing_pct,cause,plan
+resignation_date,2068,86.6,Exit information: blank for everyone who stayed,"DROP (leakage, see section 8)"
+exit_date,2040,85.4,Exit information: blank for everyone who stayed,"DROP (leakage, see section 8)"
+exit_reason,2040,85.4,Exit information: blank for everyone who stayed,"DROP (leakage, see section 8)"
+fnf_settlement_amount,2040,85.4,Exit information: blank for everyone who stayed,"DROP (leakage, see section 8)"
+exit_interview_done,2040,85.4,Exit information: blank for everyone who stayed,"DROP (leakage, see section 8)"
+months_since_last_promotion,1459,61.1,Structural: never promoted,KEEP + flag + fill with tenure_months
+last_engagement_score,528,22.1,Non-response (22%),KEEP + flag + fill with median
+last_raise_pct,202,8.5,Structural: never had a raise,KEEP + flag + fill with 0
+last_performance_rating,182,7.6,"Structural: joined <12 months ago, no appraisal yet",KEEP + flag + fill with median
+commute_distance_km,55,2.3,Random gaps (2.3%),KEEP + flag + fill with median by city
+highest_education,15,0.6,Random gaps (0.6%),KEEP + fill with 'Unknown'

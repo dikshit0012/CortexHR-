@@ -1,0 +1,255 @@
+attendance_feature_id,employee_id,month,priority,priority_points,if_anomaly_score,if_flag,rule_unexcused_absence,rule_implausible_hours,anomaly_reasons
+AF-03112,EMP-0347,2026-09,High,5,0.20815666301727842,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05447,EMP-0553,2026-09,High,5,0.20815666301727842,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03098,EMP-0347,2025-07,High,5,0.17986456638421344,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02473,EMP-0285,2026-08,High,5,0.1630228314617469,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02170,EMP-0254,2025-10,High,5,0.1525932950544785,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04604,EMP-0484,2025-12,High,5,0.14997416779359174,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06601,EMP-0630,2026-02,High,5,0.14687776249278361,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02143,EMP-0249,2026-07,High,5,0.14250772567491887,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03908,EMP-0426,2026-02,High,5,0.13990973968827114,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04182,EMP-0447,2026-08,High,5,0.13812260858282066,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03086,EMP-0346,2026-01,High,5,0.1370616653649197,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04174,EMP-0447,2025-12,High,5,0.13509289987592066,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02819,EMP-0318,2026-06,High,4,0.20868581880348291,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05918,EMP-0585,2025-09,High,4,0.20868581880348291,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06635,EMP-0633,2026-08,High,4,0.20868581880348291,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06802,EMP-0646,2026-06,High,4,0.20815666301727842,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02087,EMP-0246,2025-08,High,4,0.2065713420814106,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04333,EMP-0460,2025-10,High,4,0.2065713420814106,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00494,EMP-0056,2025-11,High,4,0.2060436164373578,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00736,EMP-0087,2026-05,High,4,0.2060436164373578,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05661,EMP-0570,2025-11,High,4,0.2060436164373578,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05875,EMP-0582,2026-01,High,4,0.2060436164373578,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03170,EMP-0356,2025-07,High,4,0.20520806123062196,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06443,EMP-0619,2026-08,High,4,0.20243656928482034,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-07324,EMP-0730,2026-09,High,4,0.1762430885511983,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04681,EMP-0494,2025-09,High,4,0.17555111042902982,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00345,EMP-0041,2026-03,High,4,0.16501380551948652,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01343,EMP-0147,2026-01,High,4,0.15289254461657875,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04406,EMP-0466,2026-09,High,4,0.15047730255989888,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02205,EMP-0256,2025-09,High,4,0.14602269509086507,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01480,EMP-0158,2026-07,High,4,0.1447695499702577,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00927,EMP-0100,2025-10,High,4,0.14324903238066589,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01620,EMP-0188,2025-04,High,4,0.14119418458609578,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06990,EMP-0664,2026-04,High,4,0.13841053923670565,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04263,EMP-0456,2025-12,High,4,0.13708205339981816,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06914,EMP-0656,2026-08,High,4,0.1359266721559511,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06074,EMP-0594,2026-07,High,4,0.13564023845624384,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03762,EMP-0414,2025-12,High,4,0.1289759216847225,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00851,EMP-0096,2025-06,High,4,0.12745506601640766,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01106,EMP-0125,2025-10,High,4,0.12532609205661527,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05439,EMP-0553,2026-01,High,4,0.12109130285920355,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00144,EMP-0019,2025-08,High,4,0.12065669185715211,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02047,EMP-0244,2025-04,High,4,0.10616669964386483,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00852,EMP-0096,2025-07,High,4,0.08293758648185778,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-00122,EMP-0016,2025-04,High,4,0.04423503673705542,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05723,EMP-0573,2026-07,High,4,0.030583115675650974,1,0,1,isolation forest: unusual combination of attendance features; implausible average hours per day
+AF-02135,EMP-0249,2025-11,High,4,0.02751972375059375,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01599,EMP-0184,2026-07,Medium,3,0.15299395389782455,1,0,0,isolation forest: unusual combination of attendance features
+AF-03207,EMP-0361,2026-06,Medium,3,0.1527481682427132,1,0,0,isolation forest: unusual combination of attendance features
+AF-02902,EMP-0329,2025-10,Medium,3,0.1515204864080656,1,0,0,isolation forest: unusual combination of attendance features
+AF-00789,EMP-0092,2026-04,Medium,3,0.15029487939999586,1,0,0,isolation forest: unusual combination of attendance features
+AF-03208,EMP-0361,2026-07,Medium,3,0.15029487939999586,1,0,0,isolation forest: unusual combination of attendance features
+AF-05025,EMP-0521,2026-02,Medium,3,0.15029487939999586,1,0,0,isolation forest: unusual combination of attendance features
+AF-00791,EMP-0092,2026-06,Medium,3,0.1493158853120874,1,0,0,isolation forest: unusual combination of attendance features
+AF-00790,EMP-0092,2026-05,Medium,3,0.14907134371197195,1,0,0,isolation forest: unusual combination of attendance features
+AF-01600,EMP-0184,2026-08,Medium,3,0.14907134371197195,1,0,0,isolation forest: unusual combination of attendance features
+AF-02737,EMP-0313,2025-08,Medium,3,0.1478498758433885,1,0,0,isolation forest: unusual combination of attendance features
+AF-05026,EMP-0521,2026-03,Medium,3,0.1478498758433885,1,0,0,isolation forest: unusual combination of attendance features
+AF-01601,EMP-0184,2026-09,Medium,3,0.14687418802988883,1,0,0,isolation forest: unusual combination of attendance features
+AF-02903,EMP-0329,2025-11,Medium,3,0.14687418802988883,1,0,0,isolation forest: unusual combination of attendance features
+AF-05029,EMP-0521,2026-06,Medium,3,0.14687418802988883,1,0,0,isolation forest: unusual combination of attendance features
+AF-05044,EMP-0522,2026-03,Medium,3,0.14687418802988883,1,0,0,isolation forest: unusual combination of attendance features
+AF-00792,EMP-0092,2026-07,Medium,3,0.14663047229955584,1,0,0,isolation forest: unusual combination of attendance features
+AF-02738,EMP-0313,2025-09,Medium,3,0.14663047229955584,1,0,0,isolation forest: unusual combination of attendance features
+AF-02904,EMP-0329,2025-12,Medium,3,0.14614328811126742,1,0,0,isolation forest: unusual combination of attendance features
+AF-03209,EMP-0361,2026-08,Medium,3,0.14565643343364998,1,0,0,isolation forest: unusual combination of attendance features
+AF-05027,EMP-0521,2026-04,Medium,3,0.14541312959169095,1,0,0,isolation forest: unusual combination of attendance features
+AF-05046,EMP-0522,2026-05,Medium,3,0.1441978442369065,1,0,0,isolation forest: unusual combination of attendance features
+AF-00793,EMP-0092,2026-08,Medium,3,0.14395503374223984,1,0,0,isolation forest: unusual combination of attendance features
+AF-05045,EMP-0522,2026-04,Medium,3,0.14395503374223984,1,0,0,isolation forest: unusual combination of attendance features
+AF-03210,EMP-0361,2026-09,Medium,3,0.1437123053748096,1,0,0,isolation forest: unusual combination of attendance features
+AF-05028,EMP-0521,2026-05,Medium,3,0.1437123053748096,1,0,0,isolation forest: unusual combination of attendance features
+AF-01598,EMP-0184,2026-06,Medium,3,0.1432943616001493,1,0,0,isolation forest: unusual combination of attendance features
+AF-05047,EMP-0522,2026-06,Medium,3,0.14231074485918127,1,0,0,isolation forest: unusual combination of attendance features
+AF-05048,EMP-0522,2026-07,Medium,3,0.1420685726493518,1,0,0,isolation forest: unusual combination of attendance features
+AF-02905,EMP-0329,2026-01,Medium,3,0.1415314412132509,1,0,0,isolation forest: unusual combination of attendance features
+AF-05043,EMP-0522,2026-02,Medium,3,0.14075583496001165,1,0,0,isolation forest: unusual combination of attendance features
+AF-02906,EMP-0329,2026-02,Medium,3,0.13941007839950192,1,0,0,isolation forest: unusual combination of attendance features
+AF-02739,EMP-0313,2025-10,Medium,3,0.13916888729932742,1,0,0,isolation forest: unusual combination of attendance features
+AF-05030,EMP-0521,2026-07,Medium,3,0.13767354333353754,1,0,0,isolation forest: unusual combination of attendance features
+AF-05809,EMP-0578,2026-03,Medium,3,0.1325894224272678,1,0,0,isolation forest: unusual combination of attendance features
+AF-02907,EMP-0329,2026-03,Medium,3,0.1307142445189493,1,0,0,isolation forest: unusual combination of attendance features
+AF-02740,EMP-0313,2025-11,Medium,3,0.12939641491084375,1,0,0,isolation forest: unusual combination of attendance features
+AF-01872,EMP-0218,2025-12,Medium,3,0.12502703819582983,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04665,EMP-0489,2026-07,Medium,3,0.12448494002180688,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03460,EMP-0388,2026-06,Medium,3,0.11865733492947783,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02766,EMP-0314,2026-07,Medium,3,0.11802269154903244,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03424,EMP-0382,2026-07,Medium,3,0.11802269154903244,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06186,EMP-0601,2025-10,Medium,3,0.11609410730744496,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01814,EMP-0208,2026-01,Medium,3,0.11362512221531973,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04715,EMP-0499,2025-07,Medium,3,0.11072270635780868,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01667,EMP-0190,2026-03,Medium,3,0.10377337751246407,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-01213,EMP-0135,2025-09,Medium,3,0.09670847897045409,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-07135,EMP-0683,2026-03,Medium,3,0.0894878659479057,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-05264,EMP-0541,2026-02,Medium,3,0.08475055649261887,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03378,EMP-0376,2025-09,Medium,3,0.07633901351881933,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02322,EMP-0274,2025-04,Medium,3,0.07206474769625015,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-03013,EMP-0338,2025-04,Medium,3,0.049011832969073854,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-06926,EMP-0658,2025-12,Medium,3,0.03933420328298931,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-02925,EMP-0330,2026-03,Medium,3,0.027476019402332352,1,1,0,"isolation forest: unusual combination of attendance features; unexcused absence (long unpaid streak, or no presence without leave cover)"
+AF-04346,EMP-0461,2026-03,Medium,3,0.01646279783511606,1,0,1,isolation forest: unusual combination of attendance features; implausible average hours per day
+AF-05090,EMP-0529,2025-07,Medium,3,-0.0049152584127035714,0,0,1,implausible average hours per day
+AF-01788,EMP-0207,2025-05,Medium,3,-0.008186335710758219,0,0,1,implausible average hours per day
+AF-03394,EMP-0377,2025-07,Medium,3,-0.03533919330382507,0,0,1,implausible average hours per day
+AF-05499,EMP-0557,2025-07,Medium,3,-0.044132924557936826,0,0,1,implausible average hours per day
+AF-01427,EMP-0155,2025-09,Medium,3,-0.04812784880356202,0,0,1,implausible average hours per day
+AF-02060,EMP-0244,2026-05,Medium,3,-0.06443465545644911,0,0,1,implausible average hours per day
+AF-05510,EMP-0557,2026-06,Medium,3,-0.06645831771367905,0,0,1,implausible average hours per day
+AF-03910,EMP-0426,2026-04,Medium,3,-0.07022947029189652,0,0,1,implausible average hours per day
+AF-04864,EMP-0510,2026-03,Medium,3,-0.08358550936309744,0,0,1,implausible average hours per day
+AF-02469,EMP-0285,2026-04,Medium,3,-0.08556402717016548,0,0,1,implausible average hours per day
+AF-06658,EMP-0635,2026-03,Medium,3,-0.08880578347930324,0,0,1,implausible average hours per day
+AF-04879,EMP-0512,2025-08,Medium,3,-0.0983869645314332,0,0,1,implausible average hours per day
+AF-00275,EMP-0034,2026-01,Medium,3,-0.11405768614073253,0,0,1,implausible average hours per day
+AF-00389,EMP-0047,2025-05,Medium,3,-0.13095458820118067,0,0,1,implausible average hours per day
+AF-00148,EMP-0019,2025-12,Medium,3,-0.1386208904349096,0,0,1,implausible average hours per day
+AF-00396,EMP-0047,2025-12,Medium,3,-0.14317863830756833,0,0,1,implausible average hours per day
+AF-02651,EMP-0305,2025-12,Medium,2,0.13627854447908305,1,0,0,isolation forest: unusual combination of attendance features
+AF-02741,EMP-0313,2025-12,Medium,2,0.12774888045443178,1,0,0,isolation forest: unusual combination of attendance features
+AF-03206,EMP-0361,2026-05,Medium,2,0.12471396447531502,1,0,0,isolation forest: unusual combination of attendance features
+AF-02951,EMP-0332,2025-05,Medium,2,0.10568547124071204,1,0,0,isolation forest: unusual combination of attendance features
+AF-05392,EMP-0549,2026-06,Medium,2,0.10152618255529755,1,0,0,isolation forest: unusual combination of attendance features
+AF-01115,EMP-0125,2026-07,Medium,2,0.10050912124016476,1,0,0,isolation forest: unusual combination of attendance features
+AF-04599,EMP-0484,2025-07,Medium,2,0.09974985933926983,1,0,0,isolation forest: unusual combination of attendance features
+AF-02742,EMP-0313,2026-01,Medium,2,0.09661164816788348,1,0,0,isolation forest: unusual combination of attendance features
+AF-00788,EMP-0092,2026-03,Medium,2,0.09432876500411791,1,0,0,isolation forest: unusual combination of attendance features
+AF-02171,EMP-0254,2025-11,Medium,2,0.08712970958125277,1,0,0,isolation forest: unusual combination of attendance features
+AF-00761,EMP-0089,2025-06,Medium,2,0.08597899088690719,1,0,0,isolation forest: unusual combination of attendance features
+AF-02697,EMP-0308,2025-04,Medium,2,0.08276834212235573,1,0,0,isolation forest: unusual combination of attendance features
+AF-00875,EMP-0097,2025-12,Medium,2,0.08140105236413775,1,0,0,isolation forest: unusual combination of attendance features
+AF-04386,EMP-0464,2026-07,Medium,2,0.08100764243478986,1,0,0,isolation forest: unusual combination of attendance features
+AF-04371,EMP-0464,2025-04,Medium,2,0.08045036614808465,1,0,0,isolation forest: unusual combination of attendance features
+AF-07078,EMP-0675,2026-06,Medium,2,0.0683318919012379,1,0,0,isolation forest: unusual combination of attendance features
+AF-01789,EMP-0207,2025-06,Medium,2,0.061391731884430145,1,0,0,isolation forest: unusual combination of attendance features
+AF-00794,EMP-0092,2026-09,Medium,2,0.059723915701939245,1,0,0,isolation forest: unusual combination of attendance features
+AF-03671,EMP-0406,2026-03,Medium,2,0.05725688754465674,1,0,0,isolation forest: unusual combination of attendance features
+AF-01426,EMP-0155,2025-08,Medium,2,0.05628141899680428,1,0,0,isolation forest: unusual combination of attendance features
+AF-07079,EMP-0675,2026-07,Medium,2,0.053215019121551355,1,0,0,isolation forest: unusual combination of attendance features
+AF-03674,EMP-0406,2026-06,Medium,2,0.052387042104530934,1,0,0,isolation forest: unusual combination of attendance features
+AF-04357,EMP-0463,2025-08,Medium,2,0.05234079069400077,1,0,0,isolation forest: unusual combination of attendance features
+AF-06659,EMP-0635,2026-04,Medium,2,0.05009451246854113,1,0,0,isolation forest: unusual combination of attendance features
+AF-03767,EMP-0414,2026-05,Medium,2,0.04890665600127364,1,0,0,isolation forest: unusual combination of attendance features
+AF-05385,EMP-0549,2025-11,Medium,2,0.04814274521851469,1,0,0,isolation forest: unusual combination of attendance features
+AF-00243,EMP-0031,2026-05,Medium,2,0.04618495892523711,1,0,0,isolation forest: unusual combination of attendance features
+AF-06598,EMP-0630,2025-11,Medium,2,0.045586751532219916,1,0,0,isolation forest: unusual combination of attendance features
+AF-00266,EMP-0034,2025-04,Medium,2,0.044930582067985614,1,0,0,isolation forest: unusual combination of attendance features
+AF-03084,EMP-0346,2025-11,Medium,2,0.044306947068262104,1,0,0,isolation forest: unusual combination of attendance features
+AF-00532,EMP-0059,2026-01,Medium,2,0.04270032837665794,1,0,0,isolation forest: unusual combination of attendance features
+AF-04374,EMP-0464,2025-07,Medium,2,0.041707785759715676,1,0,0,isolation forest: unusual combination of attendance features
+AF-04863,EMP-0510,2026-02,Medium,2,0.04092899856661192,1,0,0,isolation forest: unusual combination of attendance features
+AF-05799,EMP-0578,2025-05,Medium,2,0.04025222623600122,1,0,0,isolation forest: unusual combination of attendance features
+AF-00760,EMP-0089,2025-05,Medium,2,0.03968567786245658,1,0,0,isolation forest: unusual combination of attendance features
+AF-06663,EMP-0635,2026-08,Medium,2,0.03432931851953147,1,0,0,isolation forest: unusual combination of attendance features
+AF-02963,EMP-0332,2026-05,Medium,2,0.02990369764024592,1,0,0,isolation forest: unusual combination of attendance features
+AF-04614,EMP-0485,2025-04,Medium,2,0.02875490869158903,1,0,0,isolation forest: unusual combination of attendance features
+AF-00527,EMP-0059,2025-08,Medium,2,0.028019924563557508,1,0,0,isolation forest: unusual combination of attendance features
+AF-05100,EMP-0529,2026-05,Medium,2,0.025512197200065923,1,0,0,isolation forest: unusual combination of attendance features
+AF-00872,EMP-0097,2025-09,Medium,2,0.022442959803931628,1,0,0,isolation forest: unusual combination of attendance features
+AF-05049,EMP-0522,2026-08,Medium,2,0.017586302538714516,1,0,0,isolation forest: unusual combination of attendance features
+AF-04628,EMP-0485,2026-06,Medium,2,0.01608891143652602,1,0,0,isolation forest: unusual combination of attendance features
+AF-04363,EMP-0463,2026-02,Medium,2,0.01584167595688457,1,0,0,isolation forest: unusual combination of attendance features
+AF-05091,EMP-0529,2025-08,Medium,2,0.014764685703314018,1,0,0,isolation forest: unusual combination of attendance features
+AF-04028,EMP-0434,2026-02,Medium,2,0.012171559566663714,1,0,0,isolation forest: unusual combination of attendance features
+AF-05713,EMP-0573,2025-09,Medium,2,0.011642455535437635,1,0,0,isolation forest: unusual combination of attendance features
+AF-06604,EMP-0630,2026-05,Medium,2,0.011212749604176064,1,0,0,isolation forest: unusual combination of attendance features
+AF-05805,EMP-0578,2025-11,Medium,2,0.010904201506187206,1,0,0,isolation forest: unusual combination of attendance features
+AF-00132,EMP-0016,2026-02,Medium,2,0.007534731751777879,1,0,0,isolation forest: unusual combination of attendance features
+AF-05103,EMP-0529,2026-08,Medium,2,0.006520627526534373,1,0,0,isolation forest: unusual combination of attendance features
+AF-04887,EMP-0512,2026-04,Medium,2,0.005830054994046319,1,0,0,isolation forest: unusual combination of attendance features
+AF-04023,EMP-0434,2025-09,Medium,2,0.0052184470899382385,1,0,0,isolation forest: unusual combination of attendance features
+AF-00235,EMP-0031,2025-09,Medium,2,0.0051974313467463285,1,0,0,isolation forest: unusual combination of attendance features
+AF-01593,EMP-0184,2026-01,Medium,2,0.003719513090753357,1,0,0,isolation forest: unusual combination of attendance features
+AF-00768,EMP-0089,2026-01,Medium,2,0.0036366840746440143,1,0,0,isolation forest: unusual combination of attendance features
+AF-02706,EMP-0308,2026-01,Medium,2,0.003343631950451398,1,0,0,isolation forest: unusual combination of attendance features
+AF-05810,EMP-0578,2026-04,Medium,2,0.0028727294608474896,1,0,0,isolation forest: unusual combination of attendance features
+AF-00867,EMP-0097,2025-04,Medium,2,0.0025754137210054484,1,0,0,isolation forest: unusual combination of attendance features
+AF-02736,EMP-0313,2025-07,Medium,2,0.0019387377608174328,1,0,0,isolation forest: unusual combination of attendance features
+AF-03401,EMP-0377,2026-02,Medium,2,0.0010420480095436613,1,0,0,isolation forest: unusual combination of attendance features
+AF-00401,EMP-0047,2026-05,Medium,2,0.000626262841391334,1,0,0,isolation forest: unusual combination of attendance features
+AF-03109,EMP-0347,2026-06,Medium,2,0.000254572197067815,1,0,0,isolation forest: unusual combination of attendance features
+AF-04859,EMP-0510,2025-10,Medium,2,0.00011469782790163308,1,0,0,isolation forest: unusual combination of attendance features
+AF-00682,EMP-0077,2026-05,Medium,2,-0.0027166642403508856,0,0,1,implausible average hours per day
+AF-01525,EMP-0174,2025-10,Medium,2,-0.039964457400444964,0,0,1,implausible average hours per day
+AF-03346,EMP-0374,2026-01,Medium,2,-0.06302773552490537,0,0,1,implausible average hours per day
+AF-03659,EMP-0405,2026-09,Medium,2,-0.08841365781244598,0,0,1,implausible average hours per day
+AF-02162,EMP-0250,2026-08,Medium,2,-0.10611374295281034,0,0,1,implausible average hours per day
+AF-02881,EMP-0328,2025-07,Medium,2,-0.11132577291705992,0,0,1,implausible average hours per day
+AF-00415,EMP-0048,2026-01,Medium,2,-0.11268272098933596,0,0,1,implausible average hours per day
+AF-02672,EMP-0306,2026-03,Medium,2,-0.11583214239144052,0,0,1,implausible average hours per day
+AF-04096,EMP-0441,2025-07,Medium,2,-0.11707531368220886,0,0,1,implausible average hours per day
+AF-02483,EMP-0286,2025-12,Medium,2,-0.11824774582715253,0,0,1,implausible average hours per day
+AF-04235,EMP-0453,2025-09,Medium,2,-0.12528749314489263,0,0,1,implausible average hours per day
+AF-00372,EMP-0046,2025-06,Medium,2,-0.12531310788548394,0,0,1,implausible average hours per day
+AF-05317,EMP-0545,2025-08,Medium,2,-0.12755742680847593,0,0,1,implausible average hours per day
+AF-04958,EMP-0517,2025-09,Medium,2,-0.13085962781859345,0,0,1,implausible average hours per day
+AF-06090,EMP-0595,2026-05,Medium,2,-0.14392070301253812,0,0,1,implausible average hours per day
+AF-06099,EMP-0596,2025-08,Medium,2,-0.1443739117694966,0,0,1,implausible average hours per day
+AF-00181,EMP-0026,2025-09,Medium,2,-0.1505026069117848,0,0,1,implausible average hours per day
+AF-06369,EMP-0615,2025-10,Low,1,0.10645660631318865,1,0,0,isolation forest: unusual combination of attendance features
+AF-01848,EMP-0212,2025-11,Low,1,0.10621363006931905,1,0,0,isolation forest: unusual combination of attendance features
+AF-00065,EMP-0011,2026-02,Low,1,0.09678433624731142,1,0,0,isolation forest: unusual combination of attendance features
+AF-04228,EMP-0452,2025-11,Low,1,0.09543983822244528,1,0,0,isolation forest: unusual combination of attendance features
+AF-04538,EMP-0480,2026-06,Low,1,0.093409217856397,1,0,0,isolation forest: unusual combination of attendance features
+AF-04439,EMP-0469,2026-03,Low,1,0.0930470108595095,1,0,0,isolation forest: unusual combination of attendance features
+AF-00458,EMP-0051,2026-08,Low,1,0.09046191395229686,1,0,0,isolation forest: unusual combination of attendance features
+AF-05244,EMP-0539,2026-07,Low,1,0.08723627731843264,1,0,0,isolation forest: unusual combination of attendance features
+AF-00623,EMP-0071,2026-02,Low,1,0.08707952314270107,1,0,0,isolation forest: unusual combination of attendance features
+AF-00263,EMP-0032,2026-07,Low,1,0.0866712223309889,1,0,0,isolation forest: unusual combination of attendance features
+AF-02350,EMP-0275,2026-04,Low,1,0.08613037083571473,1,0,0,isolation forest: unusual combination of attendance features
+AF-06738,EMP-0641,2026-02,Low,1,0.08177569516847416,1,0,0,isolation forest: unusual combination of attendance features
+AF-06133,EMP-0598,2025-06,Low,1,0.07924611299523365,1,0,0,isolation forest: unusual combination of attendance features
+AF-01455,EMP-0157,2025-12,Low,1,0.07665979690686864,1,0,0,isolation forest: unusual combination of attendance features
+AF-06218,EMP-0604,2026-03,Low,1,0.07572832170336452,1,0,0,isolation forest: unusual combination of attendance features
+AF-06206,EMP-0603,2025-05,Low,1,0.0743329008807131,1,0,0,isolation forest: unusual combination of attendance features
+AF-01500,EMP-0161,2026-09,Low,1,0.07374703463992349,1,0,0,isolation forest: unusual combination of attendance features
+AF-05949,EMP-0587,2025-04,Low,1,0.07155095087768193,1,0,0,isolation forest: unusual combination of attendance features
+AF-01504,EMP-0169,2025-07,Low,1,0.06716434404141058,1,0,0,isolation forest: unusual combination of attendance features
+AF-00582,EMP-0065,2025-09,Low,1,0.06186679937768047,1,0,0,isolation forest: unusual combination of attendance features
+AF-01373,EMP-0149,2025-07,Low,1,0.05896054593848932,1,0,0,isolation forest: unusual combination of attendance features
+AF-02251,EMP-0261,2026-07,Low,1,0.05566653731433202,1,0,0,isolation forest: unusual combination of attendance features
+AF-05702,EMP-0572,2026-04,Low,1,0.05527043598926118,1,0,0,isolation forest: unusual combination of attendance features
+AF-05060,EMP-0524,2026-01,Low,1,0.043193647055619455,1,0,0,isolation forest: unusual combination of attendance features
+AF-05628,EMP-0568,2026-02,Low,1,0.042506185680369124,1,0,0,isolation forest: unusual combination of attendance features
+AF-01178,EMP-0133,2025-10,Low,1,0.04115404374310139,1,0,0,isolation forest: unusual combination of attendance features
+AF-02580,EMP-0296,2026-07,Low,1,0.0367756832837125,1,0,0,isolation forest: unusual combination of attendance features
+AF-04013,EMP-0433,2026-05,Low,1,0.03066649930986365,1,0,0,isolation forest: unusual combination of attendance features
+AF-05650,EMP-0569,2026-06,Low,1,0.028844317379469797,1,0,0,isolation forest: unusual combination of attendance features
+AF-07232,EMP-0699,2026-09,Low,1,0.027398717728748356,1,0,0,isolation forest: unusual combination of attendance features
+AF-00328,EMP-0040,2025-12,Low,1,0.02669856888478528,1,0,0,isolation forest: unusual combination of attendance features
+AF-01031,EMP-0115,2025-04,Low,1,0.02604785888318173,1,0,0,isolation forest: unusual combination of attendance features
+AF-05196,EMP-0535,2026-07,Low,1,0.024386894968080997,1,0,0,isolation forest: unusual combination of attendance features
+AF-00719,EMP-0085,2026-06,Low,1,0.022102743335290942,1,0,0,isolation forest: unusual combination of attendance features
+AF-01995,EMP-0238,2025-06,Low,1,0.018744838988244084,1,0,0,isolation forest: unusual combination of attendance features
+AF-03479,EMP-0389,2026-09,Low,1,0.018729448724582487,1,0,0,isolation forest: unusual combination of attendance features
+AF-01572,EMP-0179,2026-09,Low,1,0.018181637100415426,1,0,0,isolation forest: unusual combination of attendance features
+AF-06392,EMP-0616,2026-05,Low,1,0.01711635171384529,1,0,0,isolation forest: unusual combination of attendance features
+AF-04553,EMP-0481,2026-03,Low,1,0.01331516037536451,1,0,0,isolation forest: unusual combination of attendance features
+AF-00702,EMP-0079,2026-07,Low,1,0.012601950042044341,1,0,0,isolation forest: unusual combination of attendance features
+AF-05284,EMP-0543,2025-11,Low,1,0.012446165077094284,1,0,0,isolation forest: unusual combination of attendance features
+AF-06612,EMP-0632,2025-11,Low,1,0.012407758086090737,1,0,0,isolation forest: unusual combination of attendance features
+AF-04832,EMP-0508,2025-05,Low,1,0.012169693772684176,1,0,0,isolation forest: unusual combination of attendance features
+AF-00639,EMP-0072,2025-12,Low,1,0.011288470758735625,1,0,0,isolation forest: unusual combination of attendance features
+AF-01010,EMP-0111,2026-07,Low,1,0.0106137164528598,1,0,0,isolation forest: unusual combination of attendance features
+AF-05545,EMP-0561,2025-07,Low,1,0.010412033629897066,1,0,0,isolation forest: unusual combination of attendance features
+AF-05826,EMP-0579,2026-06,Low,1,0.009758759196825895,1,0,0,isolation forest: unusual combination of attendance features
+AF-03506,EMP-0395,2025-12,Low,1,0.007780786533743589,1,0,0,isolation forest: unusual combination of attendance features
+AF-03931,EMP-0428,2025-07,Low,1,0.00752023117437417,1,0,0,isolation forest: unusual combination of attendance features
+AF-03835,EMP-0420,2026-01,Low,1,0.0074345760388432325,1,0,0,isolation forest: unusual combination of attendance features
+AF-07271,EMP-0709,2026-08,Low,1,0.005001167578609467,1,0,0,isolation forest: unusual combination of attendance features
+AF-01742,EMP-0201,2026-01,Low,1,0.0037333389782840953,1,0,0,isolation forest: unusual combination of attendance features
+AF-05153,EMP-0533,2025-12,Low,1,0.0016782240267171344,1,0,0,isolation forest: unusual combination of attendance features
+AF-00605,EMP-0066,2026-02,Low,1,0.0015440908349775295,1,0,0,isolation forest: unusual combination of attendance features
+AF-01293,EMP-0142,2026-05,Low,1,0.0007662461172630586,1,0,0,isolation forest: unusual combination of attendance features
+AF-03308,EMP-0372,2025-11,Low,1,0.00011334080624836318,1,0,0,isolation forest: unusual combination of attendance features

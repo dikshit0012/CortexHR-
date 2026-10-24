@@ -1,0 +1,14 @@
+rule,rows_violating,in_real_snapshot,in_historical
+tenure_months < 0,4,4,0
+attendance_rate_3m > 1 (more than 100%),2,0,2
+wfh_share_3m < 0,190,0,190
+wfh_share_3m > 1,23,0,23
+total_experience_years < 0,10,0,10
+total_experience < tenure (by more than 0.1 yr),137,0,137
+last_performance_rating outside 1-5,0,0,0
+last_engagement_score outside 1-5,0,0,0
+job_level outside 1-6,0,0,0
+comp_ratio <= 0,0,0,0
+work_location spelled inconsistently,13,5,8
+promotions_received=0 but months_since_promotion given,0,0,0
+months_since_last_promotion > tenure,0,0,0

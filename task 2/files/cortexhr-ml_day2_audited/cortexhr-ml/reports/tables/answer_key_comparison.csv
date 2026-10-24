@@ -1,0 +1,7 @@
+issue_type,planted,found_by_audit,extra_flags,missed
+DUPLICATE_ROW,6,6,0,0
+NEGATIVE_TENURE,4,4,0,0
+SALARY_TYPO_OUTLIER,3,3,0,0
+IMPOSSIBLE_VALUE,2,2,0,0
+INCONSISTENT_CATEGORY,13,13,0,0
+MISSING_VALUE (commute + education),70,70,0,0
