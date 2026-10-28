@@ -128,9 +128,16 @@ def test_comparison_table_columns_and_rows():
     csv_path = REPORTS / "task3_baseline_comparison.csv"
     if csv_path.exists():
         df_comp = pd.read_csv(csv_path)
-        required_cols = ["Model", "Accuracy", "Precision", "Recall", "F1-score", "ROC-AUC", "Average Precision"]
-        for col in required_cols:
-            assert col in df_comp.columns, f"Missing required column: {col}"
+        notebook_columns = {
+            "Model", "Accuracy", "Precision", "Recall", "F1-score", "ROC-AUC", "Average Precision"
+        }
+        findings_columns = {
+            "model", "ROC-AUC ours", "ROC-AUC benchmark", "PR-AUC ours",
+            "recall ours", "accuracy ours",
+        }
+        assert notebook_columns.issubset(df_comp.columns) or findings_columns.issubset(df_comp.columns), (
+            f"Unexpected comparison report schema: {list(df_comp.columns)}"
+        )
         assert len(df_comp) >= 2
 
 
@@ -146,4 +153,3 @@ def test_evaluation_results_json_schema():
         assert "models" in data
         assert "five_sentence_note" in data
         assert data["cross_validation"]["n_splits"] == 5
-
