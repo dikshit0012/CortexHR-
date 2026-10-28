@@ -1,0 +1,4 @@
+alert_tier,alerts,true_errors_found,false_alarms,precision,share_of_all_100_errors_found
+"Tier 1: rule alerts (high-confidence, explainable)",120,92,28,0.7666666666666667,0.92
+Tier 2: model-only alerts (review queue),133,5,128,0.03759398496240601,0.05
+Tier 1 + Tier 2 (= combined detector),253,97,156,0.383399209486166,0.97

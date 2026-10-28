@@ -1,0 +1,10 @@
+Feature,Formula,Why it helps
+gross_to_fixed_gross,gross_pay / monthly_fixed_gross,Actual gross vs the employee's fixed entitlement. Zero pay (0) and wrong-decimal pay (~10x) sit far from the normal 0.3-3 range.
+deduction_ratio,total_deductions / gross_pay,Share of gross taken in deductions. Excess tax pushes it above 1; a missing deduction lowers it. NaN when gross_pay is 0.
+net_pay_ratio,net_pay / gross_pay,Take-home share of gross. Negative or tiny values signal over-deduction. NaN when gross_pay is 0.
+gross_vs_expected,gross_pay / (monthly_fixed_gross * payable_days / days_in_month + overtime_pay + variable_pay),Checks the data-dictionary identity 'gross = earned fixed + overtime + variable'. Should be ~1.0; a shifted decimal breaks it. NaN when the expected gross is 0.
+fixed_gross_vs_role_median,monthly_fixed_gross / median monthly_fixed_gross for the same role_id in the previous calendar month,Pay relative to the prior month's role norm. A salary far above its role is a role/grade mismatch. NaN when no prior-month role reference exists.
+fixed_gross_change_vs_prev,monthly_fixed_gross / the employee's previous-month monthly_fixed_gross,Month-on-month change in the fixed salary. A drop suggests payment on a stale (pre-revision) salary; a large jump suggests a wrong grade. NaN for an employee's first month.
+overtime_hours_paid,overtime_hours_paid (raw),Overtime hours are capped at 50 by policy; very large values indicate an overtime spike.
+overtime_pay_share,overtime_pay / gross_pay,Overtime as a share of gross. Normal is near 0; a spike dominates the payslip. NaN when gross_pay is 0.
+pf_vs_prev_month,pf_employee / the employee's previous-month pf_employee (only when the previous PF > 0),PF is stable month to month; a drop to 0 means provident fund was not deducted. NaN when there is no previous month or previous PF was 0 (PF-exempt employees).

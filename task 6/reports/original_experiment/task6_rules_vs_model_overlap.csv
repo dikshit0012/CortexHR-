@@ -1,0 +1,10 @@
+error_type,actual_cases,caught_by_rules_only,caught_by_model_only,caught_by_both,missed_by_both
+DOUBLE_PAYMENT,15,15,0,0,0
+MISSED_DEDUCTION,15,11,0,3,1
+NEGATIVE_NET,8,0,0,8,0
+OVERTIME_SPIKE,15,0,5,8,2
+ROLE_MISMATCH,15,0,0,15,0
+STALE_SALARY,12,11,0,1,0
+WRONG_DECIMAL,15,0,0,15,0
+ZERO_PAY,5,4,0,1,0
+ALL_ERRORS,100,41,5,51,3

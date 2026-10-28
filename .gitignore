@@ -24,3 +24,11 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# Task 6 - payroll detector local evaluation data and label-linked reports
+task 6/reports/**/private/
+task 6/reports/**/task6_flagged_records_with_labels.csv
+task 6/reports/**/task6_examples_masked.csv
+task 6/reports/**/task6_missed_errors.csv
+task 6/data/raw/*.xlsx
+task 6/data/raw/unlock_CX-06.csv

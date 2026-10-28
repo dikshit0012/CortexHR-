@@ -1,0 +1,24 @@
+Column,Meaning,Data type,Missing,Used for detection?,Reason
+payroll_item_id,Unique id of one employee-month pay calculation.,str,0,No (join key only),"Unique row id. The 'PI-D' prefix reveals the double-payment label, so it must never be a feature."
+run_id,Payroll run id (PR-YYYY-MM).,str,0,No,Repeats the month (PR-YYYY-MM); identifier only.
+employee_id,Unique employee code (EMP-0001 ...). Same code in every table and every workbook.,str,0,Key only,Groups payslips for the duplicate rule and for previous-month history. Not a model feature; masked in saved outputs.
+month,Month (first day).,datetime64[us],0,Key only,"Orders history, gives days-in-month, defines the duplicate pay period. Not a model feature."
+department_id,Department code (D00 Executive ... D10 Legal & Compliance).,str,0,No,"Category, not used in v1; role_id is the pay reference."
+role_id,Job role code from the roles table.,str,0,Reference key,Groups the previous-calendar-month median for fixed_gross_vs_role_median. Not a model feature itself.
+job_level,"Level 1 to 7 (1 Associate ... 6 Head, 7 CEO).",int64,0,No,Not needed; role median already captures grade.
+overtime_eligible,"Y if the role earns overtime pay (levels 1-2 in Support, HR, Finance, Operations).",str,0,Rule input,Overtime for a non-eligible role is a rule violation.
+monthly_fixed_gross,Full-month fixed gross entitlement (INR).,float64,0,Yes,"Denominator/input of gross_to_fixed_gross, role and history features, gross check."
+payable_days,Days paid = days employed minus loss-of-pay days.,float64,0,Rule input,Earned fixed pay = fixed * payable_days / days_in_month; zero-pay rule context.
+lop_days,"Loss-of-pay days (unpaid absence, unpaid leave, half day = 0.5).",float64,0,Validity only,Loss-of-pay days; checked for invalid values.
+overtime_hours_paid,Overtime hours paid (capped at 50).,float64,0,Yes,Model feature and overtime-cap rule.
+overtime_pay,Overtime pay (2x hourly rate).,float64,0,Yes,Expected-gross check and overtime_pay_share.
+variable_pay,"Bonus, incentive or award paid in the month.",float64,0,Rule input,Part of expected gross.
+variable_pay_type,"Performance Bonus, Sales Incentive, Festival Bonus or Spot Award.",str,6202,No,Description of the bonus; blank simply means no bonus (not an error).
+gross_pay,Earned fixed pay + overtime + variable pay.,float64,0,Yes,Numerator/denominator of most ratios and the gross reconciliation rule.
+pf_employee,Employee provident fund deduction.,float64,0,Yes,pf_vs_prev_month and missed-PF rule.
+esi_employee,Employee ESI deduction.,float64,0,Validity only,Part of total_deductions; checked for invalid values.
+professional_tax,Professional tax deduction.,int64,0,Validity only,Part of total_deductions; checked for invalid values.
+tds,Income tax deducted at source.,float64,0,Validity only,Part of total_deductions; checked for invalid values.
+other_deductions,Other deductions (loan recovery).,int64,0,Validity only,Part of total_deductions; checked for invalid values.
+total_deductions,Sum of all employee deductions.,float64,0,Yes,Numerator of deduction_ratio.
+net_pay,Take-home pay = gross pay minus total deductions.,float64,0,Yes,Numerator of net_pay_ratio; negative/zero net rules.

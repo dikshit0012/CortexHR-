@@ -1,0 +1,78 @@
+{
+  "workbook": "02_CortexHR_AI_ML_Dataset.xlsx",
+  "label_sheet": "payroll_anomaly_labels",
+  "join_validation": {
+    "label_rows": 100,
+    "unique_label_keys": 100,
+    "duplicate_label_keys": 0,
+    "duplicate_feature_keys": 0,
+    "matched_rows": 100,
+    "unmatched_rows": 0,
+    "feature_rows": 7355,
+    "evaluation_rows_used": 100
+  },
+  "clean_row_overlap": {
+    "clean_rows": 7255,
+    "flagged_by_rules_only": 13,
+    "flagged_by_model_only": 128,
+    "flagged_by_both": 0,
+    "flagged_by_neither": 7114
+  },
+  "data_quality": {
+    "rows": 7355,
+    "employees": 528,
+    "months": 18,
+    "duplicate_item_ids": 0,
+    "invalid_numeric_values": 0,
+    "missing_numeric_values": 0,
+    "rows_in_employee_month_duplicate_groups": 30,
+    "negative_net_rows": 8,
+    "zero_net_rows": 5,
+    "zero_gross_rows": 5
+  },
+  "model_config": {
+    "contamination": 0.025,
+    "n_estimators": 200,
+    "random_state": 42,
+    "score_threshold": null,
+    "features": [
+      "gross_to_fixed_gross",
+      "deduction_ratio",
+      "net_pay_ratio",
+      "gross_vs_expected",
+      "fixed_gross_vs_role_median",
+      "fixed_gross_change_vs_prev",
+      "overtime_hours_paid",
+      "overtime_pay_share",
+      "pf_vs_prev_month"
+    ]
+  },
+  "rule_config": {
+    "overtime_cap_hours": 50.0,
+    "gross_tolerance": 0.001,
+    "role_ratio_limit": 2.0,
+    "fixed_gross_jump_limit": 1.5,
+    "fixed_gross_drop_limit": 0.99,
+    "flag_all_duplicate_copies": false
+  },
+  "checks": {
+    "model_features": [
+      "gross_to_fixed_gross",
+      "deduction_ratio",
+      "net_pay_ratio",
+      "gross_vs_expected",
+      "fixed_gross_vs_role_median",
+      "fixed_gross_change_vs_prev",
+      "overtime_hours_paid",
+      "overtime_pay_share",
+      "pf_vs_prev_month"
+    ],
+    "forbidden_columns_in_model_features": [],
+    "label_columns_in_model_features": [],
+    "labels_loaded_at_prediction_time": false,
+    "predictions_completed_at_utc": "2026-10-25T17:26:52.128391+00:00",
+    "combined_equals_rules_or_model": true,
+    "join_no_duplicates_no_drops": true,
+    "labels_mutually_exclusive": true
+  }
+}

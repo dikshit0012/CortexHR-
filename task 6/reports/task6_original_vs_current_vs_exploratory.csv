@@ -1,0 +1,10 @@
+variant,approach,flagged,tp,fp,fn,tn,precision,recall,f1
+"Original experiment (v1: file-order duplicate rule, file-order model fit)",rules,105,92,13,8,7242,0.8761904761904762,0.92,0.8975609756097561
+"Original experiment (v1: file-order duplicate rule, file-order model fit)",model,184,56,128,44,7127,0.30434782608695654,0.56,0.3943661971830986
+"Original experiment (v1: file-order duplicate rule, file-order model fit)",combined,238,97,141,3,7114,0.40756302521008403,0.97,0.57396449704142
+"Current configuration (order-independent duplicate rule, canonical model fit)",rules,120,92,28,8,7227,0.7666666666666667,0.92,0.8363636363636363
+"Current configuration (order-independent duplicate rule, canonical model fit)",model,184,56,128,44,7127,0.30434782608695654,0.56,0.3943661971830986
+"Current configuration (order-independent duplicate rule, canonical model fit)",combined,253,97,156,3,7099,0.383399209486166,0.97,0.5495750708215298
+POST-EVALUATION exploratory: current + salary-drop suppression (NOT adopted),rules,110,92,18,8,7237,0.8363636363636363,0.92,0.8761904761904761
+POST-EVALUATION exploratory: current + salary-drop suppression (NOT adopted),model,184,56,128,44,7127,0.30434782608695654,0.56,0.3943661971830986
+POST-EVALUATION exploratory: current + salary-drop suppression (NOT adopted),combined,243,97,146,3,7109,0.3991769547325103,0.97,0.565597667638484

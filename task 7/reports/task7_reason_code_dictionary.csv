@@ -1,0 +1,18 @@
+priority,reason_code,source,detector_signal,meaning,money_at_risk_basis,in_official_sample
+1,DUPLICATE_PAYMENT,payroll,rule_duplicate_payment,"Same employee, same pay month and identical amounts appear on more than one payslip.","Possible extra payment = (copies - 1) x net pay, split equally over the flagged copies so it is never counted twice.",False
+2,NEGATIVE_NET_PAY,payroll,rule_negative_net,Net pay is below zero.,Deductions above the employee's usual deduction share of gross pay (own previous months; dataset median if none).,True
+3,ZERO_PAY,payroll,rule_zero_net,Net pay is exactly zero although the employee had payable days.,Expected net pay = expected gross pay x (1 - usual deduction share); amount not paid.,True
+4,GROSS_ABOVE_NORM,payroll,rule_gross_mismatch (gross higher),Gross pay is higher than fixed pay for the days paid + overtime + variable pay add up to.,gross pay - expected gross pay.,True
+5,GROSS_BELOW_EXPECTED,payroll,rule_gross_mismatch (gross lower),Gross pay is lower than fixed pay for the days paid + overtime + variable pay add up to.,expected gross pay - gross pay.,True
+6,OVERTIME_ABOVE_CAP,payroll,rule_overtime_cap (hours above cap),Paid overtime hours exceed the 50-hour policy cap.,Overtime pay x (hours - cap) / hours: pay attributable to the hours above the cap.,True
+7,OVERTIME_NOT_ELIGIBLE,payroll,rule_overtime_cap (role not eligible),Overtime was paid to a role that is not overtime-eligible.,Overtime pay paid.,False
+8,PF_NOT_DEDUCTED,payroll,rule_missed_pf,Provident fund is 0 although it was deducted in the previous month.,Provident fund deducted in the previous month.,True
+9,PAY_ABOVE_ROLE_NORM,payroll,rule_role_pay_outlier,Fixed pay is more than twice the median fixed pay of the same role.,(fixed pay - role median fixed pay) x payable days / days in month.,False
+10,SALARY_JUMP,payroll,rule_fixed_gross_jump,Fixed pay rose by more than 50% compared with the previous month.,(fixed pay - last month's fixed pay) x payable days / days in month.,False
+11,SALARY_DROP,payroll,rule_salary_drop,Fixed pay fell compared with the previous month.,(last month's fixed pay - fixed pay) x payable days / days in month.,False
+12,INVALID_PAYROLL_DATA,payroll,rule_invalid_amounts,A required payroll amount is missing or not a valid number.,No estimate (the amounts needed are not reliable).,False
+13,NO_ATTENDANCE,attendance,rule_unexcused_absence (no presence),No presence recorded in a month with scheduled days and not covered by paid leave.,Not applicable (attendance rows carry no money estimate).,True
+14,LONG_UNPAID_ABSENCE,attendance,rule_unexcused_absence (long streak),Five or more consecutive unpaid absence days.,Not applicable (attendance rows carry no money estimate).,True
+15,IMPLAUSIBLE_HOURS,attendance,rule_implausible_hours,Average working day above 12 hours.,Not applicable (attendance rows carry no money estimate).,False
+16,STATISTICAL_OUTLIER,payroll,Isolation Forest only (payroll),"Flagged only by the statistical model: the payslip is unusual, no rule was broken, the cause is unknown.",No estimate. Left empty because no defensible amount exists.,True
+17,PATTERN_SHIFT,attendance,Isolation Forest only (attendance),"Flagged only by the statistical model: attendance is unusual, no rule was broken, the cause is unknown.",Not applicable (attendance rows carry no money estimate).,True

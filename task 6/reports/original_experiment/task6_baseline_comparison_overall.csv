@@ -1,0 +1,7 @@
+detector,flagged,tp,fp,fn,precision,recall,f1
+Published baseline (anomaly_baselines sheet),184,40,144,60,0.217,0.4,0.2813614262560778
+Baseline recipe replica (dup_flag marks every copy),184,37,147,63,0.20108695652173914,0.37,0.2605633802816901
+Baseline recipe replica (dup_flag marks 2nd+ copies),183,37,146,63,0.20218579234972678,0.37,0.26148409893992935
+This work: Rules only,105,92,13,8,0.8761904761904762,0.92,0.8975609756097561
+This work: Isolation Forest only,184,56,128,44,0.30434782608695654,0.56,0.3943661971830986
+This work: Combined (rules OR model),238,97,141,3,0.40756302521008403,0.97,0.57396449704142

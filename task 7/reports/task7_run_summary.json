@@ -1,0 +1,35 @@
+{
+  "workbook": "02_CortexHR_AI_ML_Dataset.xlsx",
+  "scored_at": "2026-10-01 02:00:00",
+  "rows_official": 507,
+  "rows_by_source": {
+    "attendance_monthly_features": 254,
+    "payroll_monthly_features": 253
+  },
+  "rows_by_reason_code": {
+    "PATTERN_SHIFT": 156,
+    "STATISTICAL_OUTLIER": 133,
+    "LONG_UNPAID_ABSENCE": 48,
+    "IMPLAUSIBLE_HOURS": 35,
+    "DUPLICATE_PAYMENT": 30,
+    "GROSS_ABOVE_NORM": 18,
+    "NO_ATTENDANCE": 15,
+    "PF_NOT_DEDUCTED": 14,
+    "SALARY_DROP": 13,
+    "PAY_ABOVE_ROLE_NORM": 12,
+    "GROSS_BELOW_EXPECTED": 12,
+    "NEGATIVE_NET_PAY": 8,
+    "OVERTIME_ABOVE_CAP": 8,
+    "ZERO_PAY": 5
+  },
+  "rows_with_money_estimate": 120,
+  "rows_without_money_estimate": 387,
+  "sum_of_estimates_inr_exposure_to_verify_NOT_confirmed_loss": 23845260.84,
+  "sample_rows": 20,
+  "human_review_status": "PENDING - no human feedback has been recorded",
+  "schema_matches_sample_sheet": true,
+  "labels_loaded_before_outputs_written": false,
+  "labels_used_for_reasons_or_amounts": false,
+  "evaluation_only_label_sheet": "payroll_anomaly_labels",
+  "evaluation_only_note": "Labels were read after the outputs were written and never influence reasons, amounts or ranking."
+}

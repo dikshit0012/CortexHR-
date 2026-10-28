@@ -1,0 +1,11 @@
+rule,total_flags,flags_on_clean_rows,hits_DOUBLE_PAYMENT,hits_MISSED_DEDUCTION,hits_NEGATIVE_NET,hits_OVERTIME_SPIKE,hits_ROLE_MISMATCH,hits_STALE_SALARY,hits_WRONG_DECIMAL,hits_ZERO_PAY
+rule_duplicate_payment,15,0,15,0,0,0,0,0,0,0
+rule_negative_net,8,0,0,0,8,0,0,0,0,0
+rule_zero_net,5,0,0,0,0,0,0,0,0,5
+rule_gross_mismatch,35,0,0,0,0,0,3,12,15,5
+rule_overtime_cap,8,0,0,0,0,8,0,0,0,0
+rule_missed_pf,14,0,0,14,0,0,0,0,0,0
+rule_salary_drop,13,13,0,0,0,0,0,0,0,0
+rule_fixed_gross_jump,15,0,0,0,0,0,15,0,0,0
+rule_role_pay_outlier,15,0,0,0,0,0,15,0,0,0
+rule_invalid_amounts,0,0,0,0,0,0,0,0,0,0

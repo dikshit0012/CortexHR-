@@ -28,12 +28,24 @@ Phase 1 All task/
 │   └── files/           # 5-fold stratified CV, Decision Tree vs Logistic Regression
 ├── task 4/              # Model Evaluation & Diagnostic Analysis
 │   └── files/           # Cost-matrix evaluation, ROC-AUC, Manager Note
-└── task 5/              # Attendance Anomaly Detection & Phase 1 Final Review
-    ├── data/            # Raw datasets
-    ├── reports/         # Final Review Report (PDF & DOCX), anomaly metrics & flagged records
-    ├── scripts/         # Anomaly detector runner & report generator
-    ├── src/             # Anomaly detector module (Z-score + IQR + Isolation Forest)
-    └── tests/           # Unit and regression test suite
+├── task 5/              # Attendance Anomaly Detection & Phase 1 Final Review
+│   ├── data/            # Raw datasets
+│   ├── reports/         # Final Review Report (PDF & DOCX), anomaly metrics & flagged records
+│   ├── scripts/         # Anomaly detector runner & report generator
+│   ├── src/             # Anomaly detector module (Z-score + IQR + Isolation Forest)
+│   └── tests/           # Unit and regression test suite
+├── task 6/              # Phase 2 - Payroll Outlier Detector
+│   ├── data/            # Local evaluation data is git-ignored
+│   ├── reports/         # Metrics, masked flags, and comparison reports
+│   ├── scripts/         # Pipeline runner and report verifier
+│   ├── src/             # Payroll features, rules, model, and evaluation
+│   └── tests/           # Task 6 automated tests
+└── task 7/              # Phase 2 - Explainable flags and money-at-risk review
+    ├── docs/            # Human-review checklist and feedback template
+    ├── reports/         # Official-format output and review materials
+    ├── scripts/         # Pipeline runner and report verifier
+    ├── src/             # Reason codes, explanations, ranking, and risk estimates
+    └── tests/           # Task 7 automated tests
 ```
 
 ---
@@ -49,6 +61,13 @@ Phase 1 All task/
 | **Task 5** | Anomaly Detection & Review | Unsupervised multi-method anomaly detection (Isolation Forest, Z-score, IQR) with 100% test pass rate. Generated Phase 1 Comprehensive Review Report. |
 
 ---
+
+## Phase 2 Deliverables
+
+| Task | Focus Area | Key Deliverables |
+|---|---|---|
+| **Task 6** | Payroll anomaly detection | Payroll rules and Isolation Forest, per-error-type evaluation, and independently verified reports. |
+| **Task 7** | Explainable anomaly review | Stable reason codes, plain-language explanations, money-at-risk estimates, and human-review materials. |
 
 ## 🧪 Running Tests & Scripts
 
@@ -66,3 +85,16 @@ To re-generate the Phase 1 Review Report:
 ```bash
 python "task 5/scripts/generate_phase1_report.py"
 ```
+
+To run the Phase 2 pipelines and their tests:
+```bash
+python -m pytest "task 6/tests"
+python "task 6/scripts/run_task6.py"
+python "task 6/scripts/verify_task6_reports.py"
+
+python -m pytest "task 7/tests"
+python "task 7/scripts/run_task7.py"
+python "task 7/scripts/verify_task7_reports.py"
+```
+
+The Task 6 workbook and label mapping are local evaluation resources and are intentionally excluded from Git.
